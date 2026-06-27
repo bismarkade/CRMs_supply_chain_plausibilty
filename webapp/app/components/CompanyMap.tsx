@@ -13,7 +13,7 @@ import {
 } from "react-leaflet";
 import { TIER_COLORS, VERDICT_COLORS } from "./constants";
 import { arc, spread } from "./arc";
-import { tierIcon, TIER_LUCIDE } from "./markerIcons";
+import { tierIcon, cahraIcon, TIER_LUCIDE } from "./markerIcons";
 import type { ChainNode } from "@/lib/types";
 
 function FitBounds({ pts }: { pts: [number, number][] }) {
@@ -76,18 +76,25 @@ export default function CompanyMap({
           );
         })}
         {mine?.cahra && mine.cahra !== "no" && (
-          <CircleMarker
-            center={pts[0]}
-            radius={18}
-            pathOptions={{
-              color: mine.cahra === "yes" ? "#C0392B" : "#E08A1E",
-              weight: 2,
-              fillColor: mine.cahra === "yes" ? "#C0392B" : "#E08A1E",
-              fillOpacity: 0.15,
-            }}
-          >
-            <Tooltip>CAHRA: {mine.cahra}</Tooltip>
-          </CircleMarker>
+          <Fragment>
+            <CircleMarker
+              center={pts[0]}
+              radius={22}
+              pathOptions={{
+                color: mine.cahra === "yes" ? "#C0392B" : "#E08A1E",
+                weight: 3,
+                fillColor: mine.cahra === "yes" ? "#C0392B" : "#E08A1E",
+                fillOpacity: 0.18,
+              }}
+            >
+              <Tooltip>CAHRA risk: {mine.cahra}</Tooltip>
+            </CircleMarker>
+            <Marker
+              position={pts[0]}
+              icon={cahraIcon(mine.cahra)}
+              interactive={false}
+            />
+          </Fragment>
         )}
         {chain.map((c, i) => (
           <Marker key={i} position={pts[i]} icon={tierIcon(c.tier)}>

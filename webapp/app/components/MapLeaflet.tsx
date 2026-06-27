@@ -13,7 +13,7 @@ import {
 import Link from "next/link";
 import { TIER_COLORS, VERDICT_COLORS } from "./constants";
 import { arc, spread } from "./arc";
-import { tierIcon, TIER_LUCIDE } from "./markerIcons";
+import { tierIcon, cahraIcon, TIER_LUCIDE } from "./markerIcons";
 
 const BASEMAPS: Record<string, { url: string; dark: boolean }> = {
   dark: {
@@ -88,20 +88,27 @@ export default function MapLeaflet({
                   </Fragment>
                 );
               })}
-              {/* conflict (CAHRA) ring on the mine */}
+              {/* conflict (CAHRA): bold ring + warning badge on the mine */}
               {conflict && p.cahra && p.cahra !== "no" && (
-                <CircleMarker
-                  center={disp[0]}
-                  radius={16}
-                  pathOptions={{
-                    color: CAHRA_COLOR[p.cahra],
-                    weight: 2,
-                    fillColor: CAHRA_COLOR[p.cahra],
-                    fillOpacity: 0.15,
-                  }}
-                >
-                  <Tooltip>CAHRA: {p.cahra}</Tooltip>
-                </CircleMarker>
+                <Fragment>
+                  <CircleMarker
+                    center={disp[0]}
+                    radius={20}
+                    pathOptions={{
+                      color: CAHRA_COLOR[p.cahra],
+                      weight: 3,
+                      fillColor: CAHRA_COLOR[p.cahra],
+                      fillOpacity: 0.18,
+                    }}
+                  >
+                    <Tooltip>CAHRA risk: {p.cahra}</Tooltip>
+                  </CircleMarker>
+                  <Marker
+                    position={disp[0]}
+                    icon={cahraIcon(p.cahra)}
+                    interactive={false}
+                  />
+                </Fragment>
               )}
               {/* node markers */}
               {p.nodes.map((n: any, i: number) => (
@@ -188,14 +195,17 @@ export default function MapLeaflet({
           ))}
           {hasCahra && (
             <>
-              <div className="mb-1 mt-2 font-bold">Conflict (CAHRA)</div>
-              {["yes", "partial"].map((c) => (
+              <div className="mb-1 mt-2 font-bold">Conflict (CAHRA) ⚠</div>
+              {[
+                ["yes", "high-risk"],
+                ["partial", "partial"],
+              ].map(([c, lbl]) => (
                 <div key={c} className="flex items-center gap-2">
                   <span
                     className="inline-block h-2.5 w-2.5 rounded-full"
-                    style={{ border: `2px solid ${CAHRA_COLOR[c]}` }}
+                    style={{ background: CAHRA_COLOR[c] }}
                   />
-                  {c}
+                  {lbl}
                 </div>
               ))}
             </>
