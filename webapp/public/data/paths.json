@@ -1,0 +1,577 @@
+[
+ {
+  "id": "lithium__BMW",
+  "mineral": "lithium",
+  "company": "BMW",
+  "verdict": "PASS",
+  "overall": 1.0,
+  "mine": "Hombre Muerto",
+  "cahra": null,
+  "nodes": [
+   {
+    "lat": -25.35085,
+    "lon": -67.14146,
+    "tier": "Mining",
+    "node_name": "Hombre Muerto",
+    "company": "Livent/Arcadium",
+    "country": "Argentina",
+    "thumb": "assets/ndvi/lithium_BMW.png",
+    "ndvi": 0.0393,
+    "ndvi_verdict": "CONFIRMED"
+   },
+   {
+    "lat": -25.3509,
+    "lon": -67.1415,
+    "tier": "Processing",
+    "node_name": "Arcadium plant Fenix",
+    "company": "Livent/Arcadium",
+    "country": "Argentina"
+   },
+   {
+    "lat": 48.18957,
+    "lon": 11.57455,
+    "tier": "Manufacturing",
+    "node_name": "BMW Group",
+    "company": "BMW",
+    "country": "Germany"
+   }
+  ]
+ },
+ {
+  "id": "lithium__Volkswagen",
+  "mineral": "lithium",
+  "company": "Volkswagen",
+  "verdict": "WARN",
+  "overall": 0.79,
+  "mine": "Goulamina",
+  "cahra": null,
+  "nodes": [
+   {
+    "lat": 11.34952,
+    "lon": -7.97232,
+    "tier": "Mining",
+    "node_name": "Goulamina",
+    "company": "Ganfeng + Mali state",
+    "country": "Mali",
+    "thumb": "assets/ndvi/lithium_Volkswagen.png",
+    "ndvi": 0.3667,
+    "ndvi_verdict": "UNCERTAIN"
+   },
+   {
+    "lat": 27.817,
+    "lon": 114.917,
+    "tier": "Processing",
+    "node_name": "Ganfeng refinery",
+    "company": "Ganfeng Lithium",
+    "country": "China"
+   },
+   {
+    "lat": 52.17945,
+    "lon": 10.44119,
+    "tier": "Manufacturing",
+    "node_name": "PowerCo",
+    "company": "Volkswagen PowerCo",
+    "country": "Germany"
+   }
+  ]
+ },
+ {
+  "id": "lithium__Stellantis",
+  "mineral": "lithium",
+  "company": "Stellantis",
+  "verdict": "PASS",
+  "overall": 1.0,
+  "mine": "Salar de Rincon",
+  "cahra": null,
+  "nodes": [
+   {
+    "lat": -24.0596,
+    "lon": -67.0961,
+    "tier": "Mining",
+    "node_name": "Salar de Rincon",
+    "company": "Argentina Lithium",
+    "country": "Argentina",
+    "thumb": "assets/ndvi/lithium_Stellantis.png",
+    "ndvi": 0.0291,
+    "ndvi_verdict": "CONFIRMED"
+   },
+   {
+    "lat": -25.22699,
+    "lon": -64.5912,
+    "tier": "Processing",
+    "node_name": "Argentina Lithium plant",
+    "company": "Argentina Lithium",
+    "country": "Argentina"
+   },
+   {
+    "lat": 48.93877,
+    "lon": 2.05083,
+    "tier": "Manufacturing",
+    "node_name": "Stellantis",
+    "company": "Stellantis",
+    "country": "France"
+   }
+  ]
+ },
+ {
+  "id": "lithium__Umicore",
+  "mineral": "lithium",
+  "company": "Umicore",
+  "verdict": "WARN",
+  "overall": 0.74,
+  "mine": "via Ganfeng feed",
+  "cahra": null,
+  "nodes": [
+   {
+    "lat": -31.05477,
+    "lon": 121.44848,
+    "tier": "Mining",
+    "node_name": "via Ganfeng feed",
+    "company": "Ganfeng Lithium",
+    "country": "Australia",
+    "thumb": "assets/ndvi/lithium_Umicore.png",
+    "ndvi": 0.2587,
+    "ndvi_verdict": "CONSISTENT"
+   },
+   {
+    "lat": 27.817,
+    "lon": 114.917,
+    "tier": "Processing",
+    "node_name": "Ganfeng / Vulcan",
+    "company": "Ganfeng / Vulcan Energy",
+    "country": "China"
+   },
+   {
+    "lat": 50.8509,
+    "lon": 4.35836,
+    "tier": "Manufacturing",
+    "node_name": "Umicore cathode",
+    "company": "Umicore",
+    "country": "Belgium"
+   }
+  ]
+ },
+ {
+  "id": "lithium__AMG_Critical_Materials",
+  "mineral": "lithium",
+  "company": "AMG Critical Materials",
+  "verdict": "WARN",
+  "overall": 0.79,
+  "mine": "Mibra",
+  "cahra": null,
+  "nodes": [
+   {
+    "lat": -21.09,
+    "lon": -44.59139,
+    "tier": "Mining",
+    "node_name": "Mibra",
+    "company": "AMG",
+    "country": "Brazil",
+    "thumb": "assets/ndvi/lithium_AMG_Critical_Materials.png",
+    "ndvi": 0.5169,
+    "ndvi_verdict": "UNCERTAIN"
+   },
+   {
+    "lat": 51.6425,
+    "lon": 12.30763,
+    "tier": "Processing",
+    "node_name": "Bitterfeld refinery",
+    "company": "AMG Lithium",
+    "country": "Germany"
+   },
+   {
+    "lat": 51.6425,
+    "lon": 12.30763,
+    "tier": "Manufacturing",
+    "node_name": "AMG Lithium",
+    "company": "AMG Lithium",
+    "country": "Germany"
+   }
+  ]
+ },
+ {
+  "id": "rare_earths__Bosch",
+  "mineral": "rare_earths",
+  "company": "Bosch",
+  "verdict": "PASS",
+  "overall": 0.86,
+  "mine": "Mount Weld",
+  "cahra": null,
+  "nodes": [
+   {
+    "lat": -28.7375,
+    "lon": 122.524,
+    "tier": "Mining",
+    "node_name": "Mount Weld",
+    "company": "Lynas",
+    "country": "Australia",
+    "thumb": "assets/ndvi/rare_earths_Bosch.png",
+    "ndvi": 0.2693,
+    "ndvi_verdict": "CONSISTENT"
+   },
+   {
+    "lat": 59.3797,
+    "lon": 28.1903,
+    "tier": "Processing",
+    "node_name": "Neo Silmet/Narva (Estonia)",
+    "company": "Neo Performance Materials",
+    "country": "Estonia"
+   },
+   {
+    "lat": 48.8,
+    "lon": 9.06,
+    "tier": "Manufacturing",
+    "node_name": "Bosch EV motors",
+    "company": "Robert Bosch",
+    "country": "Germany"
+   }
+  ]
+ },
+ {
+  "id": "rare_earths__Vacuumschmelze",
+  "mineral": "rare_earths",
+  "company": "Vacuumschmelze",
+  "verdict": "WARN",
+  "overall": 0.74,
+  "mine": "diversified REE feedstock",
+  "cahra": null,
+  "nodes": [
+   {
+    "lat": -28.7375,
+    "lon": 122.524,
+    "tier": "Mining",
+    "node_name": "diversified REE feedstock",
+    "company": "Lynas / MP Materials",
+    "country": "Australia",
+    "thumb": "assets/ndvi/rare_earths_Vacuumschmelze.png",
+    "ndvi": 0.2693,
+    "ndvi_verdict": "CONSISTENT"
+   },
+   {
+    "lat": 50.1336,
+    "lon": 8.92,
+    "tier": "Processing",
+    "node_name": "VAC magnets (Hanau)",
+    "company": "Vacuumschmelze",
+    "country": "Germany"
+   },
+   {
+    "lat": 42.33,
+    "lon": -83.05,
+    "tier": "Manufacturing",
+    "node_name": "GM EV (via VAC)",
+    "company": "General Motors",
+    "country": "United States"
+   }
+  ]
+ },
+ {
+  "id": "rare_earths__Siemens_Gamesa",
+  "mineral": "rare_earths",
+  "company": "Siemens Gamesa",
+  "verdict": "PASS",
+  "overall": 1.0,
+  "mine": "Bayan Obo",
+  "cahra": null,
+  "nodes": [
+   {
+    "lat": 41.7679,
+    "lon": 109.9678,
+    "tier": "Mining",
+    "node_name": "Bayan Obo",
+    "company": "China Northern REE",
+    "country": "China",
+    "thumb": "assets/ndvi/rare_earths_Siemens_Gamesa.png",
+    "ndvi": 0.1173,
+    "ndvi_verdict": "CONFIRMED"
+   },
+   {
+    "lat": 40.657,
+    "lon": 109.8403,
+    "tier": "Processing",
+    "node_name": "China REE refining",
+    "company": "China Northern REE",
+    "country": "China"
+   },
+   {
+    "lat": 53.5511,
+    "lon": 9.9937,
+    "tier": "Manufacturing",
+    "node_name": "Siemens Gamesa (wind)",
+    "company": "Siemens Gamesa",
+    "country": "Germany"
+   }
+  ]
+ },
+ {
+  "id": "rare_earths__BMW",
+  "mineral": "rare_earths",
+  "company": "BMW",
+  "verdict": "PASS",
+  "overall": 1.0,
+  "mine": "Bayan Obo",
+  "cahra": null,
+  "nodes": [
+   {
+    "lat": 41.7679,
+    "lon": 109.9678,
+    "tier": "Mining",
+    "node_name": "Bayan Obo",
+    "company": "China Northern REE",
+    "country": "China",
+    "thumb": "assets/ndvi/rare_earths_BMW.png",
+    "ndvi": 0.1173,
+    "ndvi_verdict": "CONFIRMED"
+   },
+   {
+    "lat": 25.8,
+    "lon": 114.9333,
+    "tier": "Processing",
+    "node_name": "China magnet maker",
+    "company": "JL MAG",
+    "country": "China"
+   },
+   {
+    "lat": 48.1896,
+    "lon": 11.5746,
+    "tier": "Manufacturing",
+    "node_name": "BMW EV motors",
+    "company": "BMW",
+    "country": "Germany"
+   }
+  ]
+ },
+ {
+  "id": "rare_earths__Vestas",
+  "mineral": "rare_earths",
+  "company": "Vestas",
+  "verdict": "PASS",
+  "overall": 0.93,
+  "mine": "Mount Weld",
+  "cahra": null,
+  "nodes": [
+   {
+    "lat": -28.7375,
+    "lon": 122.524,
+    "tier": "Mining",
+    "node_name": "Mount Weld",
+    "company": "Lynas",
+    "country": "Australia",
+    "thumb": "assets/ndvi/rare_earths_Vestas.png",
+    "ndvi": 0.2693,
+    "ndvi_verdict": "CONSISTENT"
+   },
+   {
+    "lat": 3.9667,
+    "lon": 103.42,
+    "tier": "Processing",
+    "node_name": "Lynas Malaysia",
+    "company": "Lynas",
+    "country": "Malaysia"
+   },
+   {
+    "lat": 56.16,
+    "lon": 10.2,
+    "tier": "Manufacturing",
+    "node_name": "Vestas (wind)",
+    "company": "Vestas",
+    "country": "Denmark"
+   }
+  ]
+ },
+ {
+  "id": "gold__Umicore",
+  "mineral": "gold",
+  "company": "Umicore",
+  "verdict": "WARN",
+  "overall": 0.75,
+  "mine": "Kibali",
+  "cahra": "yes",
+  "nodes": [
+   {
+    "lat": 3.12,
+    "lon": 29.58,
+    "tier": "Mining",
+    "node_name": "Kibali",
+    "company": "various",
+    "country": "DR Congo",
+    "thumb": "assets/ndvi/gold_Umicore.png",
+    "ndvi": 0.4749,
+    "ndvi_verdict": "UNCERTAIN",
+    "cahra": "yes"
+   },
+   {
+    "lat": 51.17,
+    "lon": 4.34,
+    "tier": "Processing",
+    "node_name": "Umicore Hoboken",
+    "company": "Umicore",
+    "country": "Belgium"
+   },
+   {
+    "lat": 50.85,
+    "lon": 4.35,
+    "tier": "Manufacturing",
+    "node_name": "Umicore precious metals",
+    "company": "Umicore",
+    "country": "Belgium"
+   }
+  ]
+ },
+ {
+  "id": "gold__Heraeus",
+  "mineral": "gold",
+  "company": "Heraeus",
+  "verdict": "WARN",
+  "overall": 0.75,
+  "mine": "Yanacocha",
+  "cahra": "partial",
+  "nodes": [
+   {
+    "lat": -6.93,
+    "lon": -78.51,
+    "tier": "Mining",
+    "node_name": "Yanacocha",
+    "company": "various",
+    "country": "Peru",
+    "thumb": "assets/ndvi/gold_Heraeus.png",
+    "ndvi": 0.4659,
+    "ndvi_verdict": "UNCERTAIN",
+    "cahra": "partial"
+   },
+   {
+    "lat": 50.13,
+    "lon": 8.92,
+    "tier": "Processing",
+    "node_name": "Heraeus refinery",
+    "company": "Heraeus",
+    "country": "Germany"
+   },
+   {
+    "lat": 50.13,
+    "lon": 8.92,
+    "tier": "Manufacturing",
+    "node_name": "Heraeus Precious Metals",
+    "company": "Heraeus",
+    "country": "Germany"
+   }
+  ]
+ },
+ {
+  "id": "gold__Pandora",
+  "mineral": "gold",
+  "company": "Pandora",
+  "verdict": "PASS",
+  "overall": 0.8,
+  "mine": "Obuasi",
+  "cahra": "partial",
+  "nodes": [
+   {
+    "lat": 6.2,
+    "lon": -1.67,
+    "tier": "Mining",
+    "node_name": "Obuasi",
+    "company": "recycled / various",
+    "country": "Ghana",
+    "thumb": "assets/ndvi/gold_Pandora.png",
+    "ndvi": 0.5266,
+    "ndvi_verdict": "UNCERTAIN",
+    "cahra": "partial"
+   },
+   {
+    "lat": 45.84,
+    "lon": 9.0,
+    "tier": "Processing",
+    "node_name": "LBMA refiner",
+    "company": "LBMA Good Delivery",
+    "country": "Switzerland"
+   },
+   {
+    "lat": 55.68,
+    "lon": 12.57,
+    "tier": "Manufacturing",
+    "node_name": "Pandora jewellery",
+    "company": "Pandora",
+    "country": "Denmark"
+   }
+  ]
+ },
+ {
+  "id": "gold__Nokia",
+  "mineral": "gold",
+  "company": "Nokia",
+  "verdict": "PASS",
+  "overall": 0.86,
+  "mine": "Kedougou ASM belt",
+  "cahra": "yes",
+  "nodes": [
+   {
+    "lat": 12.56,
+    "lon": -12.19,
+    "tier": "Mining",
+    "node_name": "Kedougou ASM belt",
+    "company": "artisanal/various",
+    "country": "Senegal",
+    "thumb": "assets/ndvi/gold_Nokia.png",
+    "ndvi": 0.2271,
+    "ndvi_verdict": "CONSISTENT",
+    "cahra": "yes"
+   },
+   {
+    "lat": 47.0,
+    "lon": 6.93,
+    "tier": "Processing",
+    "node_name": "RMI-conformant smelter",
+    "company": "RMI conformant",
+    "country": "Switzerland"
+   },
+   {
+    "lat": 60.21,
+    "lon": 24.66,
+    "tier": "Manufacturing",
+    "node_name": "Nokia electronics",
+    "company": "Nokia",
+    "country": "Finland"
+   }
+  ]
+ },
+ {
+  "id": "gold__Bosch",
+  "mineral": "gold",
+  "company": "Bosch",
+  "verdict": "PASS",
+  "overall": 1.0,
+  "mine": "Sukari",
+  "cahra": "no",
+  "nodes": [
+   {
+    "lat": 24.96,
+    "lon": 34.71,
+    "tier": "Mining",
+    "node_name": "Sukari",
+    "company": "various",
+    "country": "Egypt",
+    "thumb": "assets/ndvi/gold_Bosch.png",
+    "ndvi": 0.0541,
+    "ndvi_verdict": "CONFIRMED",
+    "cahra": "no"
+   },
+   {
+    "lat": 50.13,
+    "lon": 8.92,
+    "tier": "Processing",
+    "node_name": "RMI-conformant refiner",
+    "company": "RMI conformant",
+    "country": "Germany"
+   },
+   {
+    "lat": 48.8,
+    "lon": 9.06,
+    "tier": "Manufacturing",
+    "node_name": "Bosch electronics",
+    "company": "Robert Bosch",
+    "country": "Germany"
+   }
+  ]
+ }
+]

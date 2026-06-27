@@ -8,5 +8,64 @@
   color-scheme: light;
 }
 body {
-  @apply bg-slate-50 text-ink font-sans;
+  @apply bg-slate-50 text-ink font-sans antialiased;
+}
+
+/* animated supply-chain flow lines (SVG stroke) */
+.flow-line {
+  animation: flowdash 1.3s linear infinite;
+}
+@keyframes flowdash {
+  to {
+    stroke-dashoffset: -36;
+  }
+}
+
+/* tier marker pin (icon badge) */
+.tier-pin {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--c);
+  border: 2px solid #fff;
+  box-shadow:
+    0 0 10px var(--c),
+    0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* leaflet sits below the sticky header */
+.leaflet-container {
+  z-index: 0;
+  background: #0b1320;
+  font-family: "Barlow", sans-serif;
+}
+.leaflet-popup-content-wrapper {
+  border-radius: 10px;
+}
+
+/* on-the-fly report: print / save-as-PDF */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #fff;
+  }
+  .report-page {
+    box-shadow: none !important;
+    margin: 0 !important;
+    max-width: none !important;
+  }
+}
+
+/* thin scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 8px;
 }

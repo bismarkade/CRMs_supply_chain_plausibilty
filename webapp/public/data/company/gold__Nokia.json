@@ -111,21 +111,22 @@
   "value": 0.2271,
   "verdict": "CONSISTENT",
   "thumb": "assets/ndvi/gold_Nokia.png",
+  "png": "assets/ndvi/geo_gold_Kedougou_ASM_belt.png",
   "center": [
    12.56,
    -12.19
   ],
   "bounds": [
    [
-    12.48793,
-    -12.26384
+    12.51495,
+    -12.23625
    ],
    [
-    12.63207,
-    -12.11616
+    12.60495,
+    -12.14385
    ]
   ]
  },
- "pdf": "assets/pdf/Gold_Nokia.pdf",
+ "pdf": "",
  "cahra": "yes"
 }

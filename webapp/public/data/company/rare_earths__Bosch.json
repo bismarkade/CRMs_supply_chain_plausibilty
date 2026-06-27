@@ -110,20 +110,21 @@
   "value": 0.2693,
   "verdict": "CONSISTENT",
   "thumb": "assets/ndvi/rare_earths_Bosch.png",
+  "png": "assets/ndvi/geo_rare_earths_Mount_Weld.png",
   "center": [
    -28.7375,
    122.524
   ],
   "bounds": [
    [
-    -28.80957,
-    122.4418
+    -28.78245,
+    122.47275
    ],
    [
-    -28.66543,
-    122.6062
+    -28.69245,
+    122.57535
    ]
   ]
  },
- "pdf": "assets/pdf/Rare_Earth_Bosch.pdf"
+ "pdf": ""
 }

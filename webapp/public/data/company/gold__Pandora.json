@@ -111,21 +111,22 @@
   "value": 0.5266,
   "verdict": "UNCERTAIN",
   "thumb": "assets/ndvi/gold_Pandora.png",
+  "png": "assets/ndvi/geo_gold_Obuasi.png",
   "center": [
    6.2,
    -1.67
   ],
   "bounds": [
    [
-    6.12793,
-    -1.7425
+    6.15495,
+    -1.71525
    ],
    [
-    6.27207,
-    -1.5975
+    6.24495,
+    -1.62465
    ]
   ]
  },
- "pdf": "assets/pdf/Gold_Pandora.pdf",
+ "pdf": "",
  "cahra": "partial"
 }

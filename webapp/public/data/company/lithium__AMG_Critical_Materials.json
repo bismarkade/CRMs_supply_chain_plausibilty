@@ -110,20 +110,21 @@
   "value": 0.5169,
   "verdict": "UNCERTAIN",
   "thumb": "assets/ndvi/lithium_AMG_Critical_Materials.png",
+  "png": "assets/ndvi/geo_lithium_Mibra.png",
   "center": [
    -21.09,
    -44.59139
   ],
   "bounds": [
    [
-    -21.16207,
-    -44.66864
+    -21.13515,
+    -44.63955
    ],
    [
-    -21.01793,
-    -44.51414
+    -21.04485,
+    -44.54325
    ]
   ]
  },
- "pdf": "assets/pdf/Lithium_AMG_Critical_Materials.pdf"
+ "pdf": ""
 }

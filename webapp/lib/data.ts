@@ -14,3 +14,9 @@ export const getManifest = () =>
   read<{ version: string; minerals: number; companies: number }>(
     "manifest.json",
   );
+export const getGeo = (mineral = "all") =>
+  read<{ type: string; features: any[] }>(`geojson/${mineral}.geojson`).features;
+export const getPaths = (mineral = "all") => {
+  const all = read<any[]>("paths.json");
+  return mineral === "all" ? all : all.filter((p) => p.mineral === mineral);
+};

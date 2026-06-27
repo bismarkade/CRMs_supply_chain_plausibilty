@@ -68,6 +68,9 @@
     "share": 0.2
    }
   ],
+  "prod_source": "USGS Mineral Commodity Summaries 2025",
+  "prod_page": "USGS MCS 2025, Lithium, p.111",
+  "world_total": 240000,
   "top_country": "Australia",
   "top_share": 36.7,
   "crma_fail": false,
@@ -159,8 +162,16 @@
     "country": "Brazil",
     "value": 20,
     "share": 0.0
+   },
+   {
+    "country": "Other countries",
+    "value": 1100,
+    "share": 0.3
    }
   ],
+  "prod_source": "USGS Mineral Commodity Summaries 2025",
+  "prod_page": "USGS MCS 2025, Rare Earths, p.145",
+  "world_total": 390000,
   "top_country": "China",
   "top_share": 69.2,
   "crma_fail": true,
@@ -277,8 +288,16 @@
     "country": "Tanzania",
     "value": 60,
     "share": 1.8
+   },
+   {
+    "country": "Other countries",
+    "value": 780,
+    "share": 23.6
    }
   ],
+  "prod_source": "USGS Mineral Commodity Summaries 2025",
+  "prod_page": "USGS MCS 2025, Gold, p.83",
+  "world_total": 3300,
   "top_country": "China",
   "top_share": 11.5,
   "crma_fail": false,

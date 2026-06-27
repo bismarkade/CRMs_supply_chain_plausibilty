@@ -10,6 +10,9 @@ export interface MineralSummary {
   regime: string;
   companies: string[];
   production: { country: string; value: number; share: number }[];
+  prod_source: string;
+  prod_page: string;
+  world_total: number;
   top_country: string;
   top_share: number;
   crma_fail: boolean;
@@ -63,6 +66,7 @@ export interface CompanyDetail {
     value: number | null;
     verdict: string;
     thumb: string;
+    png: string;
     center: [number, number];
     bounds: [[number, number], [number, number]];
   };

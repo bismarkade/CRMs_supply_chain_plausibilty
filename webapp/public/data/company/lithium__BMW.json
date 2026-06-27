@@ -110,20 +110,21 @@
   "value": 0.0393,
   "verdict": "CONFIRMED",
   "thumb": "assets/ndvi/lithium_BMW.png",
+  "png": "assets/ndvi/geo_lithium_Hombre_Muerto.png",
   "center": [
    -25.35085,
    -67.14146
   ],
   "bounds": [
    [
-    -25.42292,
-    -67.22121
+    -25.39575,
+    -67.19145
    ],
    [
-    -25.27878,
-    -67.06171
+    -25.30575,
+    -67.09155
    ]
   ]
  },
- "pdf": "assets/pdf/Lithium_BMW.pdf"
+ "pdf": ""
 }

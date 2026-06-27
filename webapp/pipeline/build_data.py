@@ -16,8 +16,7 @@ import pandas as pd
 ROOT = "."  # repo root (run from there)
 OUT = "webapp/public/data"
 ASSET_NDVI = f"{OUT}/assets/ndvi"
-ASSET_PDF = f"{OUT}/assets/pdf"
-for d in (OUT, f"{OUT}/company", f"{OUT}/geojson", ASSET_NDVI, ASSET_PDF):
+for d in (OUT, f"{OUT}/company", f"{OUT}/geojson", ASSET_NDVI):
     os.makedirs(d, exist_ok=True)
 
 
@@ -96,8 +95,17 @@ def ndvi_bounds(lat, lon, km=8.0):
     ]
 
 
+# USGS MCS 2025 world mine-production totals + the "Other countries" residual
+# (verified against the per-commodity tables): lithium p.111, REE p.145, gold p.83
+WORLD = {
+    "lithium": (240000, 0),
+    "rare_earths": (390000, 1100),
+    "gold": (3300, 780),
+}
+
 minerals_out = []
 companies_out = []
+paths_out = []
 for key, m in MIN.items():
     folder = m["folder"]
     ds = f"cs_data/{folder}"
@@ -115,6 +123,10 @@ for key, m in MIN.items():
     if key == "gold":
         geo = pd.read_csv(f"{ds}/geological.csv")
         cahra = dict(zip(geo.country, geo.cahra_flag))
+    geo_bounds = {}
+    gb_path = f"reports/_assets/{key}/ndvi_geo/bounds.json"
+    if os.path.exists(gb_path):
+        geo_bounds = json.load(open(gb_path))
     prod = tf[tf.metric == "mine_production"].sort_values(
         "value", ascending=False
     )
@@ -126,6 +138,17 @@ for key, m in MIN.items():
         )
         for _, r in prod.iterrows()
     ]
+    world_total, other = WORLD[key]
+    if other > 0:
+        production.append(
+            dict(
+                country="Other countries",
+                value=int(other),
+                share=round(other / world_total * 100, 1),
+            )
+        )
+    prod_source = str(prod.iloc[0]["source"])
+    prod_page = str(prod.iloc[0]["source_ref"])
     topc = prod.iloc[0]
     gej_features = []
     companies_meta = []
@@ -242,13 +265,15 @@ for key, m in MIN.items():
         if os.path.exists(thumb_src):
             shutil.copy(thumb_src, f"{ASSET_NDVI}/{key}_{safe(company)}.png")
             thumb_rel = f"assets/ndvi/{key}_{safe(company)}.png"
-        pdf_src = f"reports/compliance_report_{m['flabel']}_{safe(company)}.pdf"
-        pdf_rel = ""
-        if os.path.exists(pdf_src):
-            shutil.copy(
-                pdf_src, f"{ASSET_PDF}/{m['flabel']}_{safe(company)}.pdf"
-            )
-            pdf_rel = f"assets/pdf/{m['flabel']}_{safe(company)}.pdf"
+        # georeferenced NDVI raster (for the Leaflet ImageOverlay), if exported
+        geo_src = f"reports/_assets/{key}/ndvi_geo/{safe(mine)}.png"
+        geo_rel = ""
+        geo_bnd = None
+        if os.path.exists(geo_src):
+            shutil.copy(geo_src, f"{ASSET_NDVI}/geo_{key}_{safe(mine)}.png")
+            geo_rel = f"assets/ndvi/geo_{key}_{safe(mine)}.png"
+            geo_bnd = geo_bounds.get(safe(mine))
+        pdf_rel = ""  # static PDFs replaced by the on-the-fly /report page
         cid = f"{key}__{safe(company)}"
         cobj = dict(
             id=cid,
@@ -269,11 +294,13 @@ for key, m in MIN.items():
                 value=nv,
                 verdict=nvv,
                 thumb=thumb_rel,
+                png=geo_rel,
                 center=[
                     float(mine_row["latitude"]),
                     float(mine_row["longitude"]),
                 ],
-                bounds=ndvi_bounds(
+                bounds=geo_bnd
+                or ndvi_bounds(
                     float(mine_row["latitude"]), float(mine_row["longitude"])
                 ),
             ),
@@ -295,6 +322,36 @@ for key, m in MIN.items():
                 verdict=vd,
             )
         )
+        # per-path nodes for the maps (markers + arcs share these coords)
+        path_nodes = []
+        for n in chain:
+            nd_ = dict(
+                lat=n["lat"],
+                lon=n["lon"],
+                tier=n["tier"],
+                node_name=n["node_name"],
+                company=n["company"],
+                country=n["country"],
+            )
+            if n["tier"] == "Mining":
+                nd_["thumb"] = thumb_rel
+                nd_["ndvi"] = nv
+                nd_["ndvi_verdict"] = nvv
+                if key == "gold":
+                    nd_["cahra"] = str(cahra.get(mcty, "no"))
+            path_nodes.append(nd_)
+        paths_out.append(
+            dict(
+                id=cid,
+                mineral=key,
+                company=company,
+                verdict=vd,
+                overall=ov,
+                mine=mine,
+                cahra=(str(cahra.get(mcty, "no")) if key == "gold" else None),
+                nodes=path_nodes,
+            )
+        )
     # per-mineral geojson
     json.dump(
         dict(type="FeatureCollection", features=gej_features),
@@ -312,6 +369,9 @@ for key, m in MIN.items():
             regime=m["regime"],
             companies=companies_meta,
             production=production,
+            prod_source=prod_source,
+            prod_page=prod_page,
+            world_total=world_total,
             top_country=topc.country,
             top_share=float(topc.world_share_pct),
             crma_fail=bool(topc.world_share_pct > 65),
@@ -333,6 +393,7 @@ json.dump(
 )
 json.dump(minerals_out, open(f"{OUT}/minerals.json", "w"), indent=1)
 json.dump(companies_out, open(f"{OUT}/companies.json", "w"), indent=1)
+json.dump(paths_out, open(f"{OUT}/paths.json", "w"), indent=1)
 import glob
 import hashlib
 
@@ -352,10 +413,4 @@ json.dump(
 print(
     f"BUILD OK  minerals={len(minerals_out)} companies={len(companies_out)} version={h.hexdigest()[:12]}"
 )
-print(
-    "assets:",
-    len(os.listdir(ASSET_NDVI)),
-    "ndvi,",
-    len(os.listdir(ASSET_PDF)),
-    "pdf",
-)
+print("assets:", len(os.listdir(ASSET_NDVI)), "ndvi pngs")

@@ -110,20 +110,21 @@
   "value": 0.2587,
   "verdict": "CONSISTENT",
   "thumb": "assets/ndvi/lithium_Umicore.png",
+  "png": "assets/ndvi/geo_lithium_via_Ganfeng_feed.png",
   "center": [
    -31.05477,
    121.44848
   ],
   "bounds": [
    [
-    -31.12684,
-    121.36435
+    -31.09995,
+    121.39605
    ],
    [
-    -30.9827,
-    121.53261
+    -31.00965,
+    121.50105
    ]
   ]
  },
- "pdf": "assets/pdf/Lithium_Umicore.pdf"
+ "pdf": ""
 }

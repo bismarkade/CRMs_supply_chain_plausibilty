@@ -110,20 +110,21 @@
   "value": 0.1173,
   "verdict": "CONFIRMED",
   "thumb": "assets/ndvi/rare_earths_BMW.png",
+  "png": "assets/ndvi/geo_rare_earths_Bayan_Obo.png",
   "center": [
    41.7679,
    109.9678
   ],
   "bounds": [
    [
-    41.69583,
-    109.87117
+    41.72295,
+    109.90755
    ],
    [
-    41.83997,
-    110.06443
+    41.81295,
+    110.02815
    ]
   ]
  },
- "pdf": "assets/pdf/Rare_Earth_BMW.pdf"
+ "pdf": ""
 }

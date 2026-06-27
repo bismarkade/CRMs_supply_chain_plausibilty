@@ -111,21 +111,22 @@
   "value": 0.4749,
   "verdict": "UNCERTAIN",
   "thumb": "assets/ndvi/gold_Umicore.png",
+  "png": "assets/ndvi/geo_gold_Kibali.png",
   "center": [
    3.12,
    29.58
   ],
   "bounds": [
    [
-    3.04793,
-    29.50782
+    3.07485,
+    29.53485
    ],
    [
-    3.19207,
-    29.65218
+    3.16515,
+    29.62515
    ]
   ]
  },
- "pdf": "assets/pdf/Gold_Umicore.pdf",
+ "pdf": "",
  "cahra": "yes"
 }

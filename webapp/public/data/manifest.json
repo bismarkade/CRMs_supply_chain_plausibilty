@@ -1,5 +1,5 @@
 {
- "version": "6907a8f3cfd1",
+ "version": "5ec3c2d570e0",
  "minerals": 3,
  "companies": 15,
  "note": "NDVI read from ndvi.csv (cached); never recomputed at build time"

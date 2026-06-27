@@ -111,21 +111,22 @@
   "value": 0.4659,
   "verdict": "UNCERTAIN",
   "thumb": "assets/ndvi/gold_Heraeus.png",
+  "png": "assets/ndvi/geo_gold_Yanacocha.png",
   "center": [
    -6.93,
    -78.51
   ],
   "bounds": [
    [
-    -7.00207,
-    -78.5826
+    -6.97515,
+    -78.55545
    ],
    [
-    -6.85793,
-    -78.4374
+    -6.88485,
+    -78.46455
    ]
   ]
  },
- "pdf": "assets/pdf/Gold_Heraeus.pdf",
+ "pdf": "",
  "cahra": "partial"
 }

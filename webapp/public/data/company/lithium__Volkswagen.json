@@ -110,20 +110,21 @@
   "value": 0.3667,
   "verdict": "UNCERTAIN",
   "thumb": "assets/ndvi/lithium_Volkswagen.png",
+  "png": "assets/ndvi/geo_lithium_Goulamina.png",
   "center": [
    11.34952,
    -7.97232
   ],
   "bounds": [
    [
-    11.27745,
-    -8.04583
+    11.30445,
+    -8.01825
    ],
    [
-    11.42159,
-    -7.89881
+    11.39445,
+    -7.92645
    ]
   ]
  },
- "pdf": "assets/pdf/Lithium_Volkswagen.pdf"
+ "pdf": ""
 }

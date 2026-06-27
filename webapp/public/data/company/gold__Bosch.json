@@ -111,21 +111,22 @@
   "value": 0.0541,
   "verdict": "CONFIRMED",
   "thumb": "assets/ndvi/gold_Bosch.png",
+  "png": "assets/ndvi/geo_gold_Sukari.png",
   "center": [
    24.96,
    34.71
   ],
   "bounds": [
    [
-    24.88793,
-    34.6305
+    24.91485,
+    34.66035
    ],
    [
-    25.03207,
-    34.7895
+    25.00515,
+    34.75965
    ]
   ]
  },
- "pdf": "assets/pdf/Gold_Bosch.pdf",
+ "pdf": "",
  "cahra": "no"
 }

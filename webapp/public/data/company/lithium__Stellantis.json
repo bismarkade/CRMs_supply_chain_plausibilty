@@ -110,20 +110,21 @@
   "value": 0.0291,
   "verdict": "CONFIRMED",
   "thumb": "assets/ndvi/lithium_Stellantis.png",
+  "png": "assets/ndvi/geo_lithium_Salar_de_Rincon.png",
   "center": [
    -24.0596,
    -67.0961
   ],
   "bounds": [
    [
-    -24.13167,
-    -67.17503
+    -24.10455,
+    -67.14555
    ],
    [
-    -23.98753,
-    -67.01717
+    -24.01455,
+    -67.04685
    ]
   ]
  },
- "pdf": "assets/pdf/Lithium_Stellantis.pdf"
+ "pdf": ""
 }
