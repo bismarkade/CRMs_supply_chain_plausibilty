@@ -148,7 +148,8 @@ export default function DashboardClient({
             <motion.div
               key={l as string}
               initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.3, delay: i * 0.04 }}
               className="rounded-xl border border-slate-200 bg-white p-4"
             >
@@ -165,7 +166,8 @@ export default function DashboardClient({
         {/* map */}
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.4 }}
           className="mb-6 overflow-hidden rounded-2xl border border-slate-800 shadow-lg"
         >
@@ -181,7 +183,8 @@ export default function DashboardClient({
             <motion.div
               key={c.id}
               initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.25, delay: Math.min(i * 0.02, 0.3) }}
             >
               <Link

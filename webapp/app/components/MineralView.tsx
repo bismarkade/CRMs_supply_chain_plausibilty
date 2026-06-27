@@ -58,7 +58,8 @@ export default function MineralView({
       {/* hero */}
       <motion.header
         initial={{ opacity: 0, y: 8 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 0.3 }}
         className="mt-2 flex flex-wrap items-center justify-between gap-4"
       >

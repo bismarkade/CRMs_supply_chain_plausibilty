@@ -6,10 +6,19 @@ so the web app can overlay it directly. Runs once; output is cached & uploaded.
   crm_sc_venv/bin/python webapp/pipeline/export_ndvi_rasters.py --test   # one mine
   crm_sc_venv/bin/python webapp/pipeline/export_ndvi_rasters.py          # all mines
 """
-import os, re, sys, json, math, warnings
-import numpy as np, pandas as pd
-import pystac_client, odc.stac
+
+import json
+import math
+import os
+import re
+import sys
+import warnings
+
 import matplotlib
+import numpy as np
+import odc.stac
+import pandas as pd
+import pystac_client
 
 matplotlib.use("Agg")
 import matplotlib.colors as mcolors
@@ -29,15 +38,20 @@ MIN = {
     "rare_earths": "Rare_Earth_Elements_ds",
     "gold": "Gold_ds",
 }
+
+
 def safe(s):
     return re.sub(r"[^A-Za-z0-9]+", "_", str(s)).strip("_")
 
+
 cat = pystac_client.Client.open(STAC_URL)
+
 
 def bbox(lat, lon, km=BUF_KM):
     dlat = km / 111.0
     dlon = km / (111.0 * math.cos(math.radians(lat)))
     return [lon - dlon, lat - dlat, lon + dlon, lat + dlat]
+
 
 def search(bb):
     for cl in (20, 40, 80):
@@ -53,6 +67,7 @@ def search(bb):
             items.sort(key=lambda it: it.properties.get("eo:cloud_cover", 100))
             return items[:15]
     return []
+
 
 def export(lat, lon, outpng):
     bb = bbox(lat, lon)
@@ -86,6 +101,7 @@ def export(lat, lon, outpng):
     Image.fromarray((rgba * 255).astype("uint8"), "RGBA").save(outpng)
     return [[round(s, 5), round(w, 5)], [round(n, 5), round(e, 5)]]
 
+
 def mines():
     out = []
     for key, folder in MIN.items():
@@ -94,8 +110,11 @@ def mines():
         )
         m = df[df.tier == "Mining"].drop_duplicates("node_name")
         for _, r in m.iterrows():
-            out.append((key, r["node_name"], float(r.latitude), float(r.longitude)))
+            out.append(
+                (key, r["node_name"], float(r.latitude), float(r.longitude))
+            )
     return out
+
 
 if __name__ == "__main__":
     test = "--test" in sys.argv
