@@ -1,0 +1,131 @@
+{
+ "id": "gold__Nokia",
+ "mineral": "gold",
+ "mineral_label": "Gold",
+ "company": "Nokia",
+ "declarant_country": "Finland",
+ "regime": "EU Conflict Minerals Regulation 2017/821 \u00b7 OECD \u00b7 LBMA",
+ "tag": "Conflict-sensitive \u2014 origins & refiners",
+ "color": "#C8922A",
+ "overall": 0.86,
+ "verdict": "PASS",
+ "scores": {
+  "geology": 1.0,
+  "distance": 1.0,
+  "structure": 1.0,
+  "ndvi": 0.7,
+  "responsible": 0.6
+ },
+ "chain": [
+  {
+   "tier": "Mining",
+   "node_name": "Kedougou ASM belt",
+   "node_type": "mine",
+   "company": "artisanal/various",
+   "country": "Senegal",
+   "lat": 12.56,
+   "lon": -12.19,
+   "source_document": "Nokia 3TG due diligence; mine origin opaque",
+   "source_url": "https://policy.trade.ec.europa.eu/development-and-sustainability/conflict-minerals-regulation_en",
+   "source_type": "disclosure_gap",
+   "confidence": "mine origin opaque"
+  },
+  {
+   "tier": "Processing",
+   "node_name": "RMI-conformant smelter",
+   "node_type": "refinery",
+   "company": "RMI conformant",
+   "country": "Switzerland",
+   "lat": 47.0,
+   "lon": 6.93,
+   "source_document": "Nokia CMRT lists RMI-conformant smelters",
+   "source_url": "https://www.responsiblemineralsinitiative.org/",
+   "source_type": "registry_verified",
+   "confidence": "refiner RMI-documented"
+  },
+  {
+   "tier": "Manufacturing",
+   "node_name": "Nokia electronics",
+   "node_type": "manufacturer",
+   "company": "Nokia",
+   "country": "Finland",
+   "lat": 60.21,
+   "lon": 24.66,
+   "source_document": "Nokia conflict-minerals reporting",
+   "source_url": "https://policy.trade.ec.europa.eu/development-and-sustainability/conflict-minerals-regulation_en",
+   "source_type": "company_report",
+   "confidence": "documented"
+  }
+ ],
+ "kg": {
+  "nodes": [
+   {
+    "id": "origin",
+    "label": "Senegal",
+    "tier": -1,
+    "kind": "country",
+    "sub": "origin country"
+   },
+   {
+    "id": "n0",
+    "label": "Kedougou ASM belt",
+    "tier": 0,
+    "kind": "Mining",
+    "sub": "artisanal/various \u00b7 Senegal"
+   },
+   {
+    "id": "n1",
+    "label": "RMI-conformant smelter",
+    "tier": 1,
+    "kind": "Processing",
+    "sub": "RMI conformant \u00b7 Switzerland"
+   },
+   {
+    "id": "n2",
+    "label": "Nokia electronics",
+    "tier": 2,
+    "kind": "Manufacturing",
+    "sub": "Nokia \u00b7 Finland"
+   }
+  ],
+  "edges": [
+   {
+    "source": "origin",
+    "target": "n0",
+    "kind": "located_in"
+   },
+   {
+    "source": "n0",
+    "target": "n1",
+    "kind": "material_flow"
+   },
+   {
+    "source": "n1",
+    "target": "n2",
+    "kind": "material_flow"
+   }
+  ]
+ },
+ "ndvi": {
+  "mine": "Kedougou ASM belt",
+  "value": 0.2271,
+  "verdict": "CONSISTENT",
+  "thumb": "assets/ndvi/gold_Nokia.png",
+  "center": [
+   12.56,
+   -12.19
+  ],
+  "bounds": [
+   [
+    12.48793,
+    -12.26384
+   ],
+   [
+    12.63207,
+    -12.11616
+   ]
+  ]
+ },
+ "pdf": "assets/pdf/Gold_Nokia.pdf",
+ "cahra": "yes"
+}

@@ -1,0 +1,129 @@
+{
+ "id": "lithium__Stellantis",
+ "mineral": "lithium",
+ "mineral_label": "Lithium",
+ "company": "Stellantis",
+ "declarant_country": "Netherlands",
+ "regime": "EU Battery Regulation 2023/1542 \u00b7 Critical Raw Materials Act 2024/1252",
+ "tag": "Battery metal \u2014 the electrification backbone",
+ "color": "#2A7DB5",
+ "overall": 1.0,
+ "verdict": "PASS",
+ "scores": {
+  "geology": 1.0,
+  "distance": 1.0,
+  "structure": 1.0,
+  "ndvi": 1.0
+ },
+ "chain": [
+  {
+   "tier": "Mining",
+   "node_name": "Salar de Rincon",
+   "node_type": "mine",
+   "company": "Argentina Lithium",
+   "country": "Argentina",
+   "lat": -24.0596,
+   "lon": -67.0961,
+   "source_document": "Stellantis\u2013Argentina Lithium ($90M, 19.9% stake, 15kt/yr)",
+   "source_url": "https://investingnews.com/lithium-juniors-ev-supply-deals/",
+   "source_type": "offtake_announcement",
+   "confidence": "documented"
+  },
+  {
+   "tier": "Processing",
+   "node_name": "Argentina Lithium plant",
+   "node_type": "processor",
+   "company": "Argentina Lithium",
+   "country": "Argentina",
+   "lat": -25.22699,
+   "lon": -64.5912,
+   "source_document": "Stellantis\u2013Argentina Lithium ($90M, 19.9% stake, 15kt/yr)",
+   "source_url": "https://investingnews.com/lithium-juniors-ev-supply-deals/",
+   "source_type": "offtake_announcement",
+   "confidence": "documented"
+  },
+  {
+   "tier": "Manufacturing",
+   "node_name": "Stellantis",
+   "node_type": "manufacturer",
+   "company": "Stellantis",
+   "country": "France",
+   "lat": 48.93877,
+   "lon": 2.05083,
+   "source_document": "Stellantis\u2013Argentina Lithium ($90M, 19.9% stake, 15kt/yr)",
+   "source_url": "https://investingnews.com/lithium-juniors-ev-supply-deals/",
+   "source_type": "offtake_announcement",
+   "confidence": "documented"
+  }
+ ],
+ "kg": {
+  "nodes": [
+   {
+    "id": "origin",
+    "label": "Argentina",
+    "tier": -1,
+    "kind": "country",
+    "sub": "origin country"
+   },
+   {
+    "id": "n0",
+    "label": "Salar de Rincon",
+    "tier": 0,
+    "kind": "Mining",
+    "sub": "Argentina Lithium \u00b7 Argentina"
+   },
+   {
+    "id": "n1",
+    "label": "Argentina Lithium plant",
+    "tier": 1,
+    "kind": "Processing",
+    "sub": "Argentina Lithium \u00b7 Argentina"
+   },
+   {
+    "id": "n2",
+    "label": "Stellantis",
+    "tier": 2,
+    "kind": "Manufacturing",
+    "sub": "Stellantis \u00b7 France"
+   }
+  ],
+  "edges": [
+   {
+    "source": "origin",
+    "target": "n0",
+    "kind": "located_in"
+   },
+   {
+    "source": "n0",
+    "target": "n1",
+    "kind": "material_flow"
+   },
+   {
+    "source": "n1",
+    "target": "n2",
+    "kind": "material_flow"
+   }
+  ]
+ },
+ "ndvi": {
+  "mine": "Salar de Rincon",
+  "value": 0.0291,
+  "verdict": "CONFIRMED",
+  "thumb": "assets/ndvi/lithium_Stellantis.png",
+  "center": [
+   -24.0596,
+   -67.0961
+  ],
+  "bounds": [
+   [
+    -24.13167,
+    -67.17503
+   ],
+   [
+    -23.98753,
+    -67.01717
+   ]
+  ]
+ },
+ "pdf": "assets/pdf/Lithium_Stellantis.pdf"
+}

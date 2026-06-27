@@ -1,0 +1,129 @@
+{
+ "id": "lithium__Umicore",
+ "mineral": "lithium",
+ "mineral_label": "Lithium",
+ "company": "Umicore",
+ "declarant_country": "Belgium",
+ "regime": "EU Battery Regulation 2023/1542 \u00b7 Critical Raw Materials Act 2024/1252",
+ "tag": "Battery metal \u2014 the electrification backbone",
+ "color": "#2A7DB5",
+ "overall": 0.74,
+ "verdict": "WARN",
+ "scores": {
+  "geology": 0.5,
+  "distance": 0.75,
+  "structure": 1.0,
+  "ndvi": 0.7
+ },
+ "chain": [
+  {
+   "tier": "Mining",
+   "node_name": "via Ganfeng feed",
+   "node_type": "mine",
+   "company": "Ganfeng Lithium",
+   "country": "Australia",
+   "lat": -31.05477,
+   "lon": 121.44848,
+   "source_document": "Umicore press: long-term lithium contracts with Ganfeng & Vulcan",
+   "source_url": "https://www.umicore.com/en/media/newsroom/umicore-signs-long-term-sustainable-lithium-contracts-with-ganfeng-and-vulcan/",
+   "source_type": "offtake_announcement",
+   "confidence": "documented (mine origin inferred)"
+  },
+  {
+   "tier": "Processing",
+   "node_name": "Ganfeng / Vulcan",
+   "node_type": "processor",
+   "company": "Ganfeng / Vulcan Energy",
+   "country": "China",
+   "lat": 27.817,
+   "lon": 114.917,
+   "source_document": "Umicore press: long-term lithium contracts with Ganfeng & Vulcan",
+   "source_url": "https://www.umicore.com/en/media/newsroom/umicore-signs-long-term-sustainable-lithium-contracts-with-ganfeng-and-vulcan/",
+   "source_type": "offtake_announcement",
+   "confidence": "documented (mine origin inferred)"
+  },
+  {
+   "tier": "Manufacturing",
+   "node_name": "Umicore cathode",
+   "node_type": "manufacturer",
+   "company": "Umicore",
+   "country": "Belgium",
+   "lat": 50.8509,
+   "lon": 4.35836,
+   "source_document": "Umicore press: long-term lithium contracts with Ganfeng & Vulcan",
+   "source_url": "https://www.umicore.com/en/media/newsroom/umicore-signs-long-term-sustainable-lithium-contracts-with-ganfeng-and-vulcan/",
+   "source_type": "offtake_announcement",
+   "confidence": "documented (mine origin inferred)"
+  }
+ ],
+ "kg": {
+  "nodes": [
+   {
+    "id": "origin",
+    "label": "Australia",
+    "tier": -1,
+    "kind": "country",
+    "sub": "origin country"
+   },
+   {
+    "id": "n0",
+    "label": "via Ganfeng feed",
+    "tier": 0,
+    "kind": "Mining",
+    "sub": "Ganfeng Lithium \u00b7 Australia"
+   },
+   {
+    "id": "n1",
+    "label": "Ganfeng / Vulcan",
+    "tier": 1,
+    "kind": "Processing",
+    "sub": "Ganfeng / Vulcan Energy \u00b7 China"
+   },
+   {
+    "id": "n2",
+    "label": "Umicore cathode",
+    "tier": 2,
+    "kind": "Manufacturing",
+    "sub": "Umicore \u00b7 Belgium"
+   }
+  ],
+  "edges": [
+   {
+    "source": "origin",
+    "target": "n0",
+    "kind": "located_in"
+   },
+   {
+    "source": "n0",
+    "target": "n1",
+    "kind": "material_flow"
+   },
+   {
+    "source": "n1",
+    "target": "n2",
+    "kind": "material_flow"
+   }
+  ]
+ },
+ "ndvi": {
+  "mine": "via Ganfeng feed",
+  "value": 0.2587,
+  "verdict": "CONSISTENT",
+  "thumb": "assets/ndvi/lithium_Umicore.png",
+  "center": [
+   -31.05477,
+   121.44848
+  ],
+  "bounds": [
+   [
+    -31.12684,
+    121.36435
+   ],
+   [
+    -30.9827,
+    121.53261
+   ]
+  ]
+ },
+ "pdf": "assets/pdf/Lithium_Umicore.pdf"
+}

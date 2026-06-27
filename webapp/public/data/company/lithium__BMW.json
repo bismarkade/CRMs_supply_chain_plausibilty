@@ -1,0 +1,129 @@
+{
+ "id": "lithium__BMW",
+ "mineral": "lithium",
+ "mineral_label": "Lithium",
+ "company": "BMW",
+ "declarant_country": "Germany",
+ "regime": "EU Battery Regulation 2023/1542 \u00b7 Critical Raw Materials Act 2024/1252",
+ "tag": "Battery metal \u2014 the electrification backbone",
+ "color": "#2A7DB5",
+ "overall": 1.0,
+ "verdict": "PASS",
+ "scores": {
+  "geology": 1.0,
+  "distance": 1.0,
+  "structure": 1.0,
+  "ndvi": 1.0
+ },
+ "chain": [
+  {
+   "tier": "Mining",
+   "node_name": "Hombre Muerto",
+   "node_type": "mine",
+   "company": "Livent/Arcadium",
+   "country": "Argentina",
+   "lat": -25.35085,
+   "lon": -67.14146,
+   "source_document": "BMW Group press T0328884EN + S&P (\u20ac285M Livent deal, 2021)",
+   "source_url": "https://www.press.bmwgroup.com/latin-america-caribbean/article/detail/T0328884EN/",
+   "source_type": "offtake_announcement",
+   "confidence": "documented"
+  },
+  {
+   "tier": "Processing",
+   "node_name": "Arcadium plant Fenix",
+   "node_type": "processor",
+   "company": "Livent/Arcadium",
+   "country": "Argentina",
+   "lat": -25.3509,
+   "lon": -67.1415,
+   "source_document": "BMW Group press T0328884EN + S&P (\u20ac285M Livent deal, 2021)",
+   "source_url": "https://www.press.bmwgroup.com/latin-america-caribbean/article/detail/T0328884EN/",
+   "source_type": "offtake_announcement",
+   "confidence": "documented"
+  },
+  {
+   "tier": "Manufacturing",
+   "node_name": "BMW Group",
+   "node_type": "manufacturer",
+   "company": "BMW",
+   "country": "Germany",
+   "lat": 48.18957,
+   "lon": 11.57455,
+   "source_document": "BMW Group press T0328884EN + S&P (\u20ac285M Livent deal, 2021)",
+   "source_url": "https://www.press.bmwgroup.com/latin-america-caribbean/article/detail/T0328884EN/",
+   "source_type": "offtake_announcement",
+   "confidence": "documented"
+  }
+ ],
+ "kg": {
+  "nodes": [
+   {
+    "id": "origin",
+    "label": "Argentina",
+    "tier": -1,
+    "kind": "country",
+    "sub": "origin country"
+   },
+   {
+    "id": "n0",
+    "label": "Hombre Muerto",
+    "tier": 0,
+    "kind": "Mining",
+    "sub": "Livent/Arcadium \u00b7 Argentina"
+   },
+   {
+    "id": "n1",
+    "label": "Arcadium plant Fenix",
+    "tier": 1,
+    "kind": "Processing",
+    "sub": "Livent/Arcadium \u00b7 Argentina"
+   },
+   {
+    "id": "n2",
+    "label": "BMW Group",
+    "tier": 2,
+    "kind": "Manufacturing",
+    "sub": "BMW \u00b7 Germany"
+   }
+  ],
+  "edges": [
+   {
+    "source": "origin",
+    "target": "n0",
+    "kind": "located_in"
+   },
+   {
+    "source": "n0",
+    "target": "n1",
+    "kind": "material_flow"
+   },
+   {
+    "source": "n1",
+    "target": "n2",
+    "kind": "material_flow"
+   }
+  ]
+ },
+ "ndvi": {
+  "mine": "Hombre Muerto",
+  "value": 0.0393,
+  "verdict": "CONFIRMED",
+  "thumb": "assets/ndvi/lithium_BMW.png",
+  "center": [
+   -25.35085,
+   -67.14146
+  ],
+  "bounds": [
+   [
+    -25.42292,
+    -67.22121
+   ],
+   [
+    -25.27878,
+    -67.06171
+   ]
+  ]
+ },
+ "pdf": "assets/pdf/Lithium_BMW.pdf"
+}

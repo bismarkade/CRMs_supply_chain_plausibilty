@@ -1,0 +1,291 @@
+[
+ {
+  "key": "lithium",
+  "label": "Lithium",
+  "tag": "Battery metal \u2014 the electrification backbone",
+  "color": "#2A7DB5",
+  "uses": [
+   "Cathodes for lithium-ion batteries \u2014 EVs & grid storage",
+   "Core enabler of the EU energy transition",
+   "Demand projected to grow several-fold by 2030"
+  ],
+  "regulation": [
+   "EU Battery Regulation 2023/1542 \u2014 supply-chain due diligence + digital battery passport (from 2027)",
+   "Critical Raw Materials Act 2024/1252 \u2014 strategic material; \u2264 65% from any one third country"
+  ],
+  "regime": "EU Battery Regulation 2023/1542 \u00b7 Critical Raw Materials Act 2024/1252",
+  "companies": [
+   "BMW",
+   "Volkswagen",
+   "Stellantis",
+   "Umicore",
+   "AMG Critical Materials"
+  ],
+  "production": [
+   {
+    "country": "Australia",
+    "value": 88000,
+    "share": 36.7
+   },
+   {
+    "country": "Chile",
+    "value": 49000,
+    "share": 20.4
+   },
+   {
+    "country": "China",
+    "value": 41000,
+    "share": 17.1
+   },
+   {
+    "country": "Zimbabwe",
+    "value": 22000,
+    "share": 9.2
+   },
+   {
+    "country": "Argentina",
+    "value": 18000,
+    "share": 7.5
+   },
+   {
+    "country": "Brazil",
+    "value": 10000,
+    "share": 4.2
+   },
+   {
+    "country": "Canada",
+    "value": 4300,
+    "share": 1.8
+   },
+   {
+    "country": "Namibia",
+    "value": 2700,
+    "share": 1.1
+   },
+   {
+    "country": "Portugal",
+    "value": 380,
+    "share": 0.2
+   }
+  ],
+  "top_country": "Australia",
+  "top_share": 36.7,
+  "crma_fail": false,
+  "verdicts": {
+   "PASS": 2,
+   "WARN": 3,
+   "FAIL": 0
+  }
+ },
+ {
+  "key": "rare_earths",
+  "label": "Rare Earths",
+  "tag": "Magnet metals \u2014 wind turbines & EV motors",
+  "color": "#1B9AAA",
+  "uses": [
+   "Permanent magnets (NdFeB) for wind generators & EV traction motors",
+   "Electronics, optics, defence",
+   "Few viable substitutes \u2014 critical to the green transition"
+  ],
+  "regulation": [
+   "Critical Raw Materials Act 2024/1252 \u2014 strategic; severe single-country concentration",
+   "China \u2248 69% of mining & \u2248 90% of refining \u2192 CRMA > 65% breach + export-control exposure"
+  ],
+  "regime": "Critical Raw Materials Act 2024/1252 \u00b7 China export-control exposure",
+  "companies": [
+   "Bosch",
+   "Vacuumschmelze",
+   "Siemens Gamesa",
+   "BMW",
+   "Vestas"
+  ],
+  "production": [
+   {
+    "country": "China",
+    "value": 270000,
+    "share": 69.2
+   },
+   {
+    "country": "United States",
+    "value": 45000,
+    "share": 11.5
+   },
+   {
+    "country": "Burma",
+    "value": 31000,
+    "share": 7.9
+   },
+   {
+    "country": "Australia",
+    "value": 13000,
+    "share": 3.3
+   },
+   {
+    "country": "Nigeria",
+    "value": 13000,
+    "share": 3.3
+   },
+   {
+    "country": "Thailand",
+    "value": 13000,
+    "share": 3.3
+   },
+   {
+    "country": "India",
+    "value": 2900,
+    "share": 0.7
+   },
+   {
+    "country": "Russia",
+    "value": 2500,
+    "share": 0.6
+   },
+   {
+    "country": "Madagascar",
+    "value": 2000,
+    "share": 0.5
+   },
+   {
+    "country": "Vietnam",
+    "value": 300,
+    "share": 0.1
+   },
+   {
+    "country": "Malaysia",
+    "value": 130,
+    "share": 0.0
+   },
+   {
+    "country": "Brazil",
+    "value": 20,
+    "share": 0.0
+   }
+  ],
+  "top_country": "China",
+  "top_share": 69.2,
+  "crma_fail": true,
+  "verdicts": {
+   "PASS": 4,
+   "WARN": 1,
+   "FAIL": 0
+  }
+ },
+ {
+  "key": "gold",
+  "label": "Gold",
+  "tag": "Conflict-sensitive \u2014 origins & refiners",
+  "color": "#C8922A",
+  "uses": [
+   "Electronics (bonding wire, connectors), jewellery",
+   "Investment & central-bank reserves",
+   "High value-density \u2192 long, opaque chains"
+  ],
+  "regulation": [
+   "EU Conflict Minerals Regulation 2017/821 (3TG) \u2014 OECD 5-step due diligence on CAHRA sourcing",
+   "LBMA Good Delivery / RMI refiner accreditation \u2014 basis of our added Rule 5"
+  ],
+  "regime": "EU Conflict Minerals Regulation 2017/821 \u00b7 OECD \u00b7 LBMA",
+  "companies": [
+   "Umicore",
+   "Heraeus",
+   "Pandora",
+   "Nokia",
+   "Bosch"
+  ],
+  "production": [
+   {
+    "country": "China",
+    "value": 380,
+    "share": 11.5
+   },
+   {
+    "country": "Russia",
+    "value": 310,
+    "share": 9.4
+   },
+   {
+    "country": "Australia",
+    "value": 290,
+    "share": 8.8
+   },
+   {
+    "country": "Canada",
+    "value": 200,
+    "share": 6.1
+   },
+   {
+    "country": "United States",
+    "value": 160,
+    "share": 4.8
+   },
+   {
+    "country": "Ghana",
+    "value": 130,
+    "share": 3.9
+   },
+   {
+    "country": "Mexico",
+    "value": 130,
+    "share": 3.9
+   },
+   {
+    "country": "Kazakhstan",
+    "value": 130,
+    "share": 3.9
+   },
+   {
+    "country": "Uzbekistan",
+    "value": 120,
+    "share": 3.6
+   },
+   {
+    "country": "Indonesia",
+    "value": 100,
+    "share": 3.0
+   },
+   {
+    "country": "Peru",
+    "value": 100,
+    "share": 3.0
+   },
+   {
+    "country": "South Africa",
+    "value": 100,
+    "share": 3.0
+   },
+   {
+    "country": "Brazil",
+    "value": 70,
+    "share": 2.1
+   },
+   {
+    "country": "Mali",
+    "value": 70,
+    "share": 2.1
+   },
+   {
+    "country": "Burkina Faso",
+    "value": 60,
+    "share": 1.8
+   },
+   {
+    "country": "Colombia",
+    "value": 60,
+    "share": 1.8
+   },
+   {
+    "country": "Tanzania",
+    "value": 60,
+    "share": 1.8
+   }
+  ],
+  "top_country": "China",
+  "top_share": 11.5,
+  "crma_fail": false,
+  "verdicts": {
+   "PASS": 3,
+   "WARN": 2,
+   "FAIL": 0
+  }
+ }
+]

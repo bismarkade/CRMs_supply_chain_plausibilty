@@ -1,0 +1,131 @@
+{
+ "id": "gold__Bosch",
+ "mineral": "gold",
+ "mineral_label": "Gold",
+ "company": "Bosch",
+ "declarant_country": "Germany",
+ "regime": "EU Conflict Minerals Regulation 2017/821 \u00b7 OECD \u00b7 LBMA",
+ "tag": "Conflict-sensitive \u2014 origins & refiners",
+ "color": "#C8922A",
+ "overall": 1.0,
+ "verdict": "PASS",
+ "scores": {
+  "geology": 1.0,
+  "distance": 1.0,
+  "structure": 1.0,
+  "ndvi": 1.0,
+  "responsible": 1.0
+ },
+ "chain": [
+  {
+   "tier": "Mining",
+   "node_name": "Sukari",
+   "node_type": "mine",
+   "company": "various",
+   "country": "Egypt",
+   "lat": 24.96,
+   "lon": 34.71,
+   "source_document": "Bosch 3TG due diligence; mine origin opaque",
+   "source_url": "https://policy.trade.ec.europa.eu/development-and-sustainability/conflict-minerals-regulation_en",
+   "source_type": "disclosure_gap",
+   "confidence": "mine origin opaque"
+  },
+  {
+   "tier": "Processing",
+   "node_name": "RMI-conformant refiner",
+   "node_type": "refinery",
+   "company": "RMI conformant",
+   "country": "Germany",
+   "lat": 50.13,
+   "lon": 8.92,
+   "source_document": "Bosch CMRT lists RMI-conformant refiners",
+   "source_url": "https://www.responsiblemineralsinitiative.org/",
+   "source_type": "registry_verified",
+   "confidence": "refiner RMI-documented"
+  },
+  {
+   "tier": "Manufacturing",
+   "node_name": "Bosch electronics",
+   "node_type": "manufacturer",
+   "company": "Robert Bosch",
+   "country": "Germany",
+   "lat": 48.8,
+   "lon": 9.06,
+   "source_document": "Bosch responsible-minerals reporting",
+   "source_url": "https://policy.trade.ec.europa.eu/development-and-sustainability/conflict-minerals-regulation_en",
+   "source_type": "company_report",
+   "confidence": "documented"
+  }
+ ],
+ "kg": {
+  "nodes": [
+   {
+    "id": "origin",
+    "label": "Egypt",
+    "tier": -1,
+    "kind": "country",
+    "sub": "origin country"
+   },
+   {
+    "id": "n0",
+    "label": "Sukari",
+    "tier": 0,
+    "kind": "Mining",
+    "sub": "various \u00b7 Egypt"
+   },
+   {
+    "id": "n1",
+    "label": "RMI-conformant refiner",
+    "tier": 1,
+    "kind": "Processing",
+    "sub": "RMI conformant \u00b7 Germany"
+   },
+   {
+    "id": "n2",
+    "label": "Bosch electronics",
+    "tier": 2,
+    "kind": "Manufacturing",
+    "sub": "Robert Bosch \u00b7 Germany"
+   }
+  ],
+  "edges": [
+   {
+    "source": "origin",
+    "target": "n0",
+    "kind": "located_in"
+   },
+   {
+    "source": "n0",
+    "target": "n1",
+    "kind": "material_flow"
+   },
+   {
+    "source": "n1",
+    "target": "n2",
+    "kind": "material_flow"
+   }
+  ]
+ },
+ "ndvi": {
+  "mine": "Sukari",
+  "value": 0.0541,
+  "verdict": "CONFIRMED",
+  "thumb": "assets/ndvi/gold_Bosch.png",
+  "center": [
+   24.96,
+   34.71
+  ],
+  "bounds": [
+   [
+    24.88793,
+    34.6305
+   ],
+   [
+    25.03207,
+    34.7895
+   ]
+  ]
+ },
+ "pdf": "assets/pdf/Gold_Bosch.pdf",
+ "cahra": "no"
+}

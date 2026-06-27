@@ -1,0 +1,131 @@
+{
+ "id": "gold__Heraeus",
+ "mineral": "gold",
+ "mineral_label": "Gold",
+ "company": "Heraeus",
+ "declarant_country": "Germany",
+ "regime": "EU Conflict Minerals Regulation 2017/821 \u00b7 OECD \u00b7 LBMA",
+ "tag": "Conflict-sensitive \u2014 origins & refiners",
+ "color": "#C8922A",
+ "overall": 0.75,
+ "verdict": "WARN",
+ "scores": {
+  "geology": 1.0,
+  "distance": 0.75,
+  "structure": 1.0,
+  "ndvi": 0.4,
+  "responsible": 0.6
+ },
+ "chain": [
+  {
+   "tier": "Mining",
+   "node_name": "Yanacocha",
+   "node_type": "mine",
+   "company": "various",
+   "country": "Peru",
+   "lat": -6.93,
+   "lon": -78.51,
+   "source_document": "Mine origin not publicly disclosed",
+   "source_url": "https://policy.trade.ec.europa.eu/development-and-sustainability/conflict-minerals-regulation_en",
+   "source_type": "disclosure_gap",
+   "confidence": "mine origin opaque"
+  },
+  {
+   "tier": "Processing",
+   "node_name": "Heraeus refinery",
+   "node_type": "refinery",
+   "company": "Heraeus",
+   "country": "Germany",
+   "lat": 50.13,
+   "lon": 8.92,
+   "source_document": "Heraeus: LBMA + RMI + RJC certified",
+   "source_url": "https://www.heraeus-precious-metals.com/en/responsibility/compliance/",
+   "source_type": "registry_verified",
+   "confidence": "refiner LBMA-documented"
+  },
+  {
+   "tier": "Manufacturing",
+   "node_name": "Heraeus Precious Metals",
+   "node_type": "manufacturer",
+   "company": "Heraeus",
+   "country": "Germany",
+   "lat": 50.13,
+   "lon": 8.92,
+   "source_document": "Heraeus responsible precious-metals procurement",
+   "source_url": "https://www.heraeus-precious-metals.com/en/responsibility/compliance/",
+   "source_type": "company_report",
+   "confidence": "documented"
+  }
+ ],
+ "kg": {
+  "nodes": [
+   {
+    "id": "origin",
+    "label": "Peru",
+    "tier": -1,
+    "kind": "country",
+    "sub": "origin country"
+   },
+   {
+    "id": "n0",
+    "label": "Yanacocha",
+    "tier": 0,
+    "kind": "Mining",
+    "sub": "various \u00b7 Peru"
+   },
+   {
+    "id": "n1",
+    "label": "Heraeus refinery",
+    "tier": 1,
+    "kind": "Processing",
+    "sub": "Heraeus \u00b7 Germany"
+   },
+   {
+    "id": "n2",
+    "label": "Heraeus Precious Metals",
+    "tier": 2,
+    "kind": "Manufacturing",
+    "sub": "Heraeus \u00b7 Germany"
+   }
+  ],
+  "edges": [
+   {
+    "source": "origin",
+    "target": "n0",
+    "kind": "located_in"
+   },
+   {
+    "source": "n0",
+    "target": "n1",
+    "kind": "material_flow"
+   },
+   {
+    "source": "n1",
+    "target": "n2",
+    "kind": "material_flow"
+   }
+  ]
+ },
+ "ndvi": {
+  "mine": "Yanacocha",
+  "value": 0.4659,
+  "verdict": "UNCERTAIN",
+  "thumb": "assets/ndvi/gold_Heraeus.png",
+  "center": [
+   -6.93,
+   -78.51
+  ],
+  "bounds": [
+   [
+    -7.00207,
+    -78.5826
+   ],
+   [
+    -6.85793,
+    -78.4374
+   ]
+  ]
+ },
+ "pdf": "assets/pdf/Gold_Heraeus.pdf",
+ "cahra": "partial"
+}

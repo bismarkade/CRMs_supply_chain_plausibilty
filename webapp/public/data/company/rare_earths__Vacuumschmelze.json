@@ -1,0 +1,129 @@
+{
+ "id": "rare_earths__Vacuumschmelze",
+ "mineral": "rare_earths",
+ "mineral_label": "Rare Earths",
+ "company": "Vacuumschmelze",
+ "declarant_country": "Germany",
+ "regime": "Critical Raw Materials Act 2024/1252 \u00b7 China export-control exposure",
+ "tag": "Magnet metals \u2014 wind turbines & EV motors",
+ "color": "#1B9AAA",
+ "overall": 0.74,
+ "verdict": "WARN",
+ "scores": {
+  "geology": 0.5,
+  "distance": 0.75,
+  "structure": 1.0,
+  "ndvi": 0.7
+ },
+ "chain": [
+  {
+   "tier": "Mining",
+   "node_name": "diversified REE feedstock",
+   "node_type": "mine",
+   "company": "Lynas / MP Materials",
+   "country": "Australia",
+   "lat": -28.7375,
+   "lon": 122.524,
+   "source_document": "VAC\u2013Ucore REE-oxide MoU (ex-China feedstock)",
+   "source_url": "https://ucore.com/ucore-announces-strategic-alliance-with-vacuumschmelze-and-evac-magnetics-llc-for-the-supply-of-rare-earth-oxides/",
+   "source_type": "company_announcement",
+   "confidence": "documented (feedstock diversified)"
+  },
+  {
+   "tier": "Processing",
+   "node_name": "VAC magnets (Hanau)",
+   "node_type": "processor",
+   "company": "Vacuumschmelze",
+   "country": "Germany",
+   "lat": 50.1336,
+   "lon": 8.92,
+   "source_document": "VAC NdFeB magnet production (Germany)",
+   "source_url": "https://www.euronews.com/next/2023/01/31/gm-vac-electric",
+   "source_type": "company_announcement",
+   "confidence": "documented"
+  },
+  {
+   "tier": "Manufacturing",
+   "node_name": "GM EV (via VAC)",
+   "node_type": "manufacturer",
+   "company": "General Motors",
+   "country": "United States",
+   "lat": 42.33,
+   "lon": -83.05,
+   "source_document": "GM\u2013VAC binding magnet supply agreement (Sept 2023)",
+   "source_url": "https://www.euronews.com/next/2023/01/31/gm-vac-electric",
+   "source_type": "company_announcement",
+   "confidence": "documented"
+  }
+ ],
+ "kg": {
+  "nodes": [
+   {
+    "id": "origin",
+    "label": "Australia",
+    "tier": -1,
+    "kind": "country",
+    "sub": "origin country"
+   },
+   {
+    "id": "n0",
+    "label": "diversified REE feedstock",
+    "tier": 0,
+    "kind": "Mining",
+    "sub": "Lynas / MP Materials \u00b7 Australia"
+   },
+   {
+    "id": "n1",
+    "label": "VAC magnets (Hanau)",
+    "tier": 1,
+    "kind": "Processing",
+    "sub": "Vacuumschmelze \u00b7 Germany"
+   },
+   {
+    "id": "n2",
+    "label": "GM EV (via VAC)",
+    "tier": 2,
+    "kind": "Manufacturing",
+    "sub": "General Motors \u00b7 United States"
+   }
+  ],
+  "edges": [
+   {
+    "source": "origin",
+    "target": "n0",
+    "kind": "located_in"
+   },
+   {
+    "source": "n0",
+    "target": "n1",
+    "kind": "material_flow"
+   },
+   {
+    "source": "n1",
+    "target": "n2",
+    "kind": "material_flow"
+   }
+  ]
+ },
+ "ndvi": {
+  "mine": "diversified REE feedstock",
+  "value": 0.2693,
+  "verdict": "CONSISTENT",
+  "thumb": "assets/ndvi/rare_earths_Vacuumschmelze.png",
+  "center": [
+   -28.7375,
+   122.524
+  ],
+  "bounds": [
+   [
+    -28.80957,
+    122.4418
+   ],
+   [
+    -28.66543,
+    122.6062
+   ]
+  ]
+ },
+ "pdf": "assets/pdf/Rare_Earth_Vacuumschmelze.pdf"
+}

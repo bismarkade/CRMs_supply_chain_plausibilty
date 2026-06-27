@@ -1,0 +1,129 @@
+{
+ "id": "rare_earths__BMW",
+ "mineral": "rare_earths",
+ "mineral_label": "Rare Earths",
+ "company": "BMW",
+ "declarant_country": "Germany",
+ "regime": "Critical Raw Materials Act 2024/1252 \u00b7 China export-control exposure",
+ "tag": "Magnet metals \u2014 wind turbines & EV motors",
+ "color": "#1B9AAA",
+ "overall": 1.0,
+ "verdict": "PASS",
+ "scores": {
+  "geology": 1.0,
+  "distance": 1.0,
+  "structure": 1.0,
+  "ndvi": 1.0
+ },
+ "chain": [
+  {
+   "tier": "Mining",
+   "node_name": "Bayan Obo",
+   "node_type": "mine",
+   "company": "China Northern REE",
+   "country": "China",
+   "lat": 41.7679,
+   "lon": 109.9678,
+   "source_document": "China ~98% of EU rare-earth magnets",
+   "source_url": "https://epthinktank.eu/2025/11/24/chinas-rare-earth-export-restrictions/",
+   "source_type": "structural_dependency",
+   "confidence": "documented at aggregate; specific path illustrative"
+  },
+  {
+   "tier": "Processing",
+   "node_name": "China magnet maker",
+   "node_type": "processor",
+   "company": "JL MAG",
+   "country": "China",
+   "lat": 25.8,
+   "lon": 114.9333,
+   "source_document": "China magnet dominance",
+   "source_url": "https://epthinktank.eu/2025/11/24/chinas-rare-earth-export-restrictions/",
+   "source_type": "structural_dependency",
+   "confidence": "documented at aggregate; specific path illustrative"
+  },
+  {
+   "tier": "Manufacturing",
+   "node_name": "BMW EV motors",
+   "node_type": "manufacturer",
+   "company": "BMW",
+   "country": "Germany",
+   "lat": 48.1896,
+   "lon": 11.5746,
+   "source_document": "EU EV motors depend on China magnets",
+   "source_url": "https://epthinktank.eu/2025/11/24/chinas-rare-earth-export-restrictions/",
+   "source_type": "structural_dependency",
+   "confidence": "documented at aggregate; specific path illustrative"
+  }
+ ],
+ "kg": {
+  "nodes": [
+   {
+    "id": "origin",
+    "label": "China",
+    "tier": -1,
+    "kind": "country",
+    "sub": "origin country"
+   },
+   {
+    "id": "n0",
+    "label": "Bayan Obo",
+    "tier": 0,
+    "kind": "Mining",
+    "sub": "China Northern REE \u00b7 China"
+   },
+   {
+    "id": "n1",
+    "label": "China magnet maker",
+    "tier": 1,
+    "kind": "Processing",
+    "sub": "JL MAG \u00b7 China"
+   },
+   {
+    "id": "n2",
+    "label": "BMW EV motors",
+    "tier": 2,
+    "kind": "Manufacturing",
+    "sub": "BMW \u00b7 Germany"
+   }
+  ],
+  "edges": [
+   {
+    "source": "origin",
+    "target": "n0",
+    "kind": "located_in"
+   },
+   {
+    "source": "n0",
+    "target": "n1",
+    "kind": "material_flow"
+   },
+   {
+    "source": "n1",
+    "target": "n2",
+    "kind": "material_flow"
+   }
+  ]
+ },
+ "ndvi": {
+  "mine": "Bayan Obo",
+  "value": 0.1173,
+  "verdict": "CONFIRMED",
+  "thumb": "assets/ndvi/rare_earths_BMW.png",
+  "center": [
+   41.7679,
+   109.9678
+  ],
+  "bounds": [
+   [
+    41.69583,
+    109.87117
+   ],
+   [
+    41.83997,
+    110.06443
+   ]
+  ]
+ },
+ "pdf": "assets/pdf/Rare_Earth_BMW.pdf"
+}

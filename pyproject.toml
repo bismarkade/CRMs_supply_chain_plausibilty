@@ -1,0 +1,35 @@
+[project]
+name = "crm-sc-plausibility"
+version = "0.1.0"
+description = "Lithium supply chain plausibility assessment — geospatial pipeline"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+
+dependencies = [
+    # Core (Sections 1-7, 9)
+    "pandas",
+    "numpy",
+    "matplotlib",
+    "plotly",
+    "networkx",
+    "folium",
+    "requests",
+    "openpyxl",
+    # Notebook / kernel
+    "ipykernel",
+    "jupyterlab",
+]
+
+[project.optional-dependencies]
+# Earth Observation (Section 8 — Copernicus STAC). Installed when we build it:
+#   uv sync --extra eo
+eo = [
+    "pystac-client",
+    "odc-stac",
+    "rioxarray",
+    "rasterio",
+]
+
+[tool.uv]
+# Use the named environment crm_sc_venv instead of the default .venv
+# (also set via the UV_PROJECT_ENVIRONMENT env var below).

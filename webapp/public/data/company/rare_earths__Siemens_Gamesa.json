@@ -1,0 +1,129 @@
+{
+ "id": "rare_earths__Siemens_Gamesa",
+ "mineral": "rare_earths",
+ "mineral_label": "Rare Earths",
+ "company": "Siemens Gamesa",
+ "declarant_country": "Germany",
+ "regime": "Critical Raw Materials Act 2024/1252 \u00b7 China export-control exposure",
+ "tag": "Magnet metals \u2014 wind turbines & EV motors",
+ "color": "#1B9AAA",
+ "overall": 1.0,
+ "verdict": "PASS",
+ "scores": {
+  "geology": 1.0,
+  "distance": 1.0,
+  "structure": 1.0,
+  "ndvi": 1.0
+ },
+ "chain": [
+  {
+   "tier": "Mining",
+   "node_name": "Bayan Obo",
+   "node_type": "mine",
+   "company": "China Northern REE",
+   "country": "China",
+   "lat": 41.7679,
+   "lon": 109.9678,
+   "source_document": "China ~90% REE refining (structural dependency)",
+   "source_url": "https://www.iea.org/reports/rare-earth-elements/executive-summary",
+   "source_type": "structural_dependency",
+   "confidence": "documented at aggregate; specific path illustrative"
+  },
+  {
+   "tier": "Processing",
+   "node_name": "China REE refining",
+   "node_type": "processor",
+   "company": "China Northern REE",
+   "country": "China",
+   "lat": 40.657,
+   "lon": 109.8403,
+   "source_document": "China dominates REE separation/magnets",
+   "source_url": "https://www.iea.org/reports/rare-earth-elements/executive-summary",
+   "source_type": "structural_dependency",
+   "confidence": "documented at aggregate; specific path illustrative"
+  },
+  {
+   "tier": "Manufacturing",
+   "node_name": "Siemens Gamesa (wind)",
+   "node_type": "manufacturer",
+   "company": "Siemens Gamesa",
+   "country": "Germany",
+   "lat": 53.5511,
+   "lon": 9.9937,
+   "source_document": "EU wind depends on NdFeB magnets",
+   "source_url": "https://www.iea.org/reports/rare-earth-elements/executive-summary",
+   "source_type": "structural_dependency",
+   "confidence": "documented at aggregate; specific path illustrative"
+  }
+ ],
+ "kg": {
+  "nodes": [
+   {
+    "id": "origin",
+    "label": "China",
+    "tier": -1,
+    "kind": "country",
+    "sub": "origin country"
+   },
+   {
+    "id": "n0",
+    "label": "Bayan Obo",
+    "tier": 0,
+    "kind": "Mining",
+    "sub": "China Northern REE \u00b7 China"
+   },
+   {
+    "id": "n1",
+    "label": "China REE refining",
+    "tier": 1,
+    "kind": "Processing",
+    "sub": "China Northern REE \u00b7 China"
+   },
+   {
+    "id": "n2",
+    "label": "Siemens Gamesa (wind)",
+    "tier": 2,
+    "kind": "Manufacturing",
+    "sub": "Siemens Gamesa \u00b7 Germany"
+   }
+  ],
+  "edges": [
+   {
+    "source": "origin",
+    "target": "n0",
+    "kind": "located_in"
+   },
+   {
+    "source": "n0",
+    "target": "n1",
+    "kind": "material_flow"
+   },
+   {
+    "source": "n1",
+    "target": "n2",
+    "kind": "material_flow"
+   }
+  ]
+ },
+ "ndvi": {
+  "mine": "Bayan Obo",
+  "value": 0.1173,
+  "verdict": "CONFIRMED",
+  "thumb": "assets/ndvi/rare_earths_Siemens_Gamesa.png",
+  "center": [
+   41.7679,
+   109.9678
+  ],
+  "bounds": [
+   [
+    41.69583,
+    109.87117
+   ],
+   [
+    41.83997,
+    110.06443
+   ]
+  ]
+ },
+ "pdf": "assets/pdf/Rare_Earth_Siemens_Gamesa.pdf"
+}

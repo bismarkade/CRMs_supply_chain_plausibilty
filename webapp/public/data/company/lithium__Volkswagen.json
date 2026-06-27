@@ -1,0 +1,129 @@
+{
+ "id": "lithium__Volkswagen",
+ "mineral": "lithium",
+ "mineral_label": "Lithium",
+ "company": "Volkswagen",
+ "declarant_country": "Germany",
+ "regime": "EU Battery Regulation 2023/1542 \u00b7 Critical Raw Materials Act 2024/1252",
+ "tag": "Battery metal \u2014 the electrification backbone",
+ "color": "#2A7DB5",
+ "overall": 0.79,
+ "verdict": "WARN",
+ "scores": {
+  "geology": 1.0,
+  "distance": 0.75,
+  "structure": 1.0,
+  "ndvi": 0.4
+ },
+ "chain": [
+  {
+   "tier": "Mining",
+   "node_name": "Goulamina",
+   "node_type": "mine",
+   "company": "Ganfeng + Mali state",
+   "country": "Mali",
+   "lat": 11.34952,
+   "lon": -7.97232,
+   "source_document": "VW\u2013Ganfeng LiOH offtake (34\u201342kt from 2026, reported)",
+   "source_url": "https://investingnews.com/lithium-juniors-ev-supply-deals/",
+   "source_type": "news",
+   "confidence": "reported"
+  },
+  {
+   "tier": "Processing",
+   "node_name": "Ganfeng refinery",
+   "node_type": "processor",
+   "company": "Ganfeng Lithium",
+   "country": "China",
+   "lat": 27.817,
+   "lon": 114.917,
+   "source_document": "VW\u2013Ganfeng LiOH offtake (34\u201342kt from 2026, reported)",
+   "source_url": "https://investingnews.com/lithium-juniors-ev-supply-deals/",
+   "source_type": "news",
+   "confidence": "reported"
+  },
+  {
+   "tier": "Manufacturing",
+   "node_name": "PowerCo",
+   "node_type": "manufacturer",
+   "company": "Volkswagen PowerCo",
+   "country": "Germany",
+   "lat": 52.17945,
+   "lon": 10.44119,
+   "source_document": "VW\u2013Ganfeng LiOH offtake (34\u201342kt from 2026, reported)",
+   "source_url": "https://investingnews.com/lithium-juniors-ev-supply-deals/",
+   "source_type": "news",
+   "confidence": "reported"
+  }
+ ],
+ "kg": {
+  "nodes": [
+   {
+    "id": "origin",
+    "label": "Mali",
+    "tier": -1,
+    "kind": "country",
+    "sub": "origin country"
+   },
+   {
+    "id": "n0",
+    "label": "Goulamina",
+    "tier": 0,
+    "kind": "Mining",
+    "sub": "Ganfeng + Mali state \u00b7 Mali"
+   },
+   {
+    "id": "n1",
+    "label": "Ganfeng refinery",
+    "tier": 1,
+    "kind": "Processing",
+    "sub": "Ganfeng Lithium \u00b7 China"
+   },
+   {
+    "id": "n2",
+    "label": "PowerCo",
+    "tier": 2,
+    "kind": "Manufacturing",
+    "sub": "Volkswagen PowerCo \u00b7 Germany"
+   }
+  ],
+  "edges": [
+   {
+    "source": "origin",
+    "target": "n0",
+    "kind": "located_in"
+   },
+   {
+    "source": "n0",
+    "target": "n1",
+    "kind": "material_flow"
+   },
+   {
+    "source": "n1",
+    "target": "n2",
+    "kind": "material_flow"
+   }
+  ]
+ },
+ "ndvi": {
+  "mine": "Goulamina",
+  "value": 0.3667,
+  "verdict": "UNCERTAIN",
+  "thumb": "assets/ndvi/lithium_Volkswagen.png",
+  "center": [
+   11.34952,
+   -7.97232
+  ],
+  "bounds": [
+   [
+    11.27745,
+    -8.04583
+   ],
+   [
+    11.42159,
+    -7.89881
+   ]
+  ]
+ },
+ "pdf": "assets/pdf/Lithium_Volkswagen.pdf"
+}

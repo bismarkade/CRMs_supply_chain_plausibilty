@@ -1,0 +1,131 @@
+{
+ "id": "gold__Umicore",
+ "mineral": "gold",
+ "mineral_label": "Gold",
+ "company": "Umicore",
+ "declarant_country": "Belgium",
+ "regime": "EU Conflict Minerals Regulation 2017/821 \u00b7 OECD \u00b7 LBMA",
+ "tag": "Conflict-sensitive \u2014 origins & refiners",
+ "color": "#C8922A",
+ "overall": 0.75,
+ "verdict": "WARN",
+ "scores": {
+  "geology": 1.0,
+  "distance": 0.75,
+  "structure": 1.0,
+  "ndvi": 0.4,
+  "responsible": 0.6
+ },
+ "chain": [
+  {
+   "tier": "Mining",
+   "node_name": "Kibali",
+   "node_type": "mine",
+   "company": "various",
+   "country": "DR Congo",
+   "lat": 3.12,
+   "lon": 29.58,
+   "source_document": "Mine origin not publicly disclosed (the compliance gap)",
+   "source_url": "https://policy.trade.ec.europa.eu/development-and-sustainability/conflict-minerals-regulation_en",
+   "source_type": "disclosure_gap",
+   "confidence": "mine origin opaque"
+  },
+  {
+   "tier": "Processing",
+   "node_name": "Umicore Hoboken",
+   "node_type": "refinery",
+   "company": "Umicore",
+   "country": "Belgium",
+   "lat": 51.17,
+   "lon": 4.34,
+   "source_document": "Umicore Hoboken: LBMA Good Delivery + Responsible Gold audited (2013)",
+   "source_url": "https://www.lbma.org.uk/good-delivery",
+   "source_type": "registry_verified",
+   "confidence": "refiner LBMA-documented"
+  },
+  {
+   "tier": "Manufacturing",
+   "node_name": "Umicore precious metals",
+   "node_type": "manufacturer",
+   "company": "Umicore",
+   "country": "Belgium",
+   "lat": 50.85,
+   "lon": 4.35,
+   "source_document": "Umicore LBMA Responsible Gold Guidance compliant",
+   "source_url": "https://www.umicore.com/en/about/recycling/precious-metals-refining/metals-products/precious-metals/",
+   "source_type": "company_report",
+   "confidence": "documented"
+  }
+ ],
+ "kg": {
+  "nodes": [
+   {
+    "id": "origin",
+    "label": "DR Congo",
+    "tier": -1,
+    "kind": "country",
+    "sub": "origin country"
+   },
+   {
+    "id": "n0",
+    "label": "Kibali",
+    "tier": 0,
+    "kind": "Mining",
+    "sub": "various \u00b7 DR Congo"
+   },
+   {
+    "id": "n1",
+    "label": "Umicore Hoboken",
+    "tier": 1,
+    "kind": "Processing",
+    "sub": "Umicore \u00b7 Belgium"
+   },
+   {
+    "id": "n2",
+    "label": "Umicore precious metals",
+    "tier": 2,
+    "kind": "Manufacturing",
+    "sub": "Umicore \u00b7 Belgium"
+   }
+  ],
+  "edges": [
+   {
+    "source": "origin",
+    "target": "n0",
+    "kind": "located_in"
+   },
+   {
+    "source": "n0",
+    "target": "n1",
+    "kind": "material_flow"
+   },
+   {
+    "source": "n1",
+    "target": "n2",
+    "kind": "material_flow"
+   }
+  ]
+ },
+ "ndvi": {
+  "mine": "Kibali",
+  "value": 0.4749,
+  "verdict": "UNCERTAIN",
+  "thumb": "assets/ndvi/gold_Umicore.png",
+  "center": [
+   3.12,
+   29.58
+  ],
+  "bounds": [
+   [
+    3.04793,
+    29.50782
+   ],
+   [
+    3.19207,
+    29.65218
+   ]
+  ]
+ },
+ "pdf": "assets/pdf/Gold_Umicore.pdf",
+ "cahra": "yes"
+}

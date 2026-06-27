@@ -1,0 +1,152 @@
+[
+ {
+  "id": "lithium__BMW",
+  "mineral": "lithium",
+  "mineral_label": "Lithium",
+  "company": "BMW",
+  "origin_mine": "Hombre Muerto",
+  "origin_country": "Argentina",
+  "overall": 1.0,
+  "verdict": "PASS"
+ },
+ {
+  "id": "lithium__Volkswagen",
+  "mineral": "lithium",
+  "mineral_label": "Lithium",
+  "company": "Volkswagen",
+  "origin_mine": "Goulamina",
+  "origin_country": "Mali",
+  "overall": 0.79,
+  "verdict": "WARN"
+ },
+ {
+  "id": "lithium__Stellantis",
+  "mineral": "lithium",
+  "mineral_label": "Lithium",
+  "company": "Stellantis",
+  "origin_mine": "Salar de Rincon",
+  "origin_country": "Argentina",
+  "overall": 1.0,
+  "verdict": "PASS"
+ },
+ {
+  "id": "lithium__Umicore",
+  "mineral": "lithium",
+  "mineral_label": "Lithium",
+  "company": "Umicore",
+  "origin_mine": "via Ganfeng feed",
+  "origin_country": "Australia",
+  "overall": 0.74,
+  "verdict": "WARN"
+ },
+ {
+  "id": "lithium__AMG_Critical_Materials",
+  "mineral": "lithium",
+  "mineral_label": "Lithium",
+  "company": "AMG Critical Materials",
+  "origin_mine": "Mibra",
+  "origin_country": "Brazil",
+  "overall": 0.79,
+  "verdict": "WARN"
+ },
+ {
+  "id": "rare_earths__Bosch",
+  "mineral": "rare_earths",
+  "mineral_label": "Rare Earths",
+  "company": "Bosch",
+  "origin_mine": "Mount Weld",
+  "origin_country": "Australia",
+  "overall": 0.86,
+  "verdict": "PASS"
+ },
+ {
+  "id": "rare_earths__Vacuumschmelze",
+  "mineral": "rare_earths",
+  "mineral_label": "Rare Earths",
+  "company": "Vacuumschmelze",
+  "origin_mine": "diversified REE feedstock",
+  "origin_country": "Australia",
+  "overall": 0.74,
+  "verdict": "WARN"
+ },
+ {
+  "id": "rare_earths__Siemens_Gamesa",
+  "mineral": "rare_earths",
+  "mineral_label": "Rare Earths",
+  "company": "Siemens Gamesa",
+  "origin_mine": "Bayan Obo",
+  "origin_country": "China",
+  "overall": 1.0,
+  "verdict": "PASS"
+ },
+ {
+  "id": "rare_earths__BMW",
+  "mineral": "rare_earths",
+  "mineral_label": "Rare Earths",
+  "company": "BMW",
+  "origin_mine": "Bayan Obo",
+  "origin_country": "China",
+  "overall": 1.0,
+  "verdict": "PASS"
+ },
+ {
+  "id": "rare_earths__Vestas",
+  "mineral": "rare_earths",
+  "mineral_label": "Rare Earths",
+  "company": "Vestas",
+  "origin_mine": "Mount Weld",
+  "origin_country": "Australia",
+  "overall": 0.93,
+  "verdict": "PASS"
+ },
+ {
+  "id": "gold__Umicore",
+  "mineral": "gold",
+  "mineral_label": "Gold",
+  "company": "Umicore",
+  "origin_mine": "Kibali",
+  "origin_country": "DR Congo",
+  "overall": 0.75,
+  "verdict": "WARN"
+ },
+ {
+  "id": "gold__Heraeus",
+  "mineral": "gold",
+  "mineral_label": "Gold",
+  "company": "Heraeus",
+  "origin_mine": "Yanacocha",
+  "origin_country": "Peru",
+  "overall": 0.75,
+  "verdict": "WARN"
+ },
+ {
+  "id": "gold__Pandora",
+  "mineral": "gold",
+  "mineral_label": "Gold",
+  "company": "Pandora",
+  "origin_mine": "Obuasi",
+  "origin_country": "Ghana",
+  "overall": 0.8,
+  "verdict": "PASS"
+ },
+ {
+  "id": "gold__Nokia",
+  "mineral": "gold",
+  "mineral_label": "Gold",
+  "company": "Nokia",
+  "origin_mine": "Kedougou ASM belt",
+  "origin_country": "Senegal",
+  "overall": 0.86,
+  "verdict": "PASS"
+ },
+ {
+  "id": "gold__Bosch",
+  "mineral": "gold",
+  "mineral_label": "Gold",
+  "company": "Bosch",
+  "origin_mine": "Sukari",
+  "origin_country": "Egypt",
+  "overall": 1.0,
+  "verdict": "PASS"
+ }
+]

@@ -1,0 +1,129 @@
+{
+ "id": "lithium__AMG_Critical_Materials",
+ "mineral": "lithium",
+ "mineral_label": "Lithium",
+ "company": "AMG Critical Materials",
+ "declarant_country": "Germany",
+ "regime": "EU Battery Regulation 2023/1542 \u00b7 Critical Raw Materials Act 2024/1252",
+ "tag": "Battery metal \u2014 the electrification backbone",
+ "color": "#2A7DB5",
+ "overall": 0.79,
+ "verdict": "WARN",
+ "scores": {
+  "geology": 1.0,
+  "distance": 0.75,
+  "structure": 1.0,
+  "ndvi": 0.4
+ },
+ "chain": [
+  {
+   "tier": "Mining",
+   "node_name": "Mibra",
+   "node_type": "mine",
+   "company": "AMG",
+   "country": "Brazil",
+   "lat": -21.09,
+   "lon": -44.59139,
+   "source_document": "AMG Lithium value chain: Mibra (BR) -> Bitterfeld (DE)",
+   "source_url": "https://amglithium.com/company/value-chain",
+   "source_type": "company_report",
+   "confidence": "documented"
+  },
+  {
+   "tier": "Processing",
+   "node_name": "Bitterfeld refinery",
+   "node_type": "processor",
+   "company": "AMG Lithium",
+   "country": "Germany",
+   "lat": 51.6425,
+   "lon": 12.30763,
+   "source_document": "AMG Lithium value chain: Mibra (BR) -> Bitterfeld (DE)",
+   "source_url": "https://amglithium.com/company/value-chain",
+   "source_type": "company_report",
+   "confidence": "documented"
+  },
+  {
+   "tier": "Manufacturing",
+   "node_name": "AMG Lithium",
+   "node_type": "manufacturer",
+   "company": "AMG Lithium",
+   "country": "Germany",
+   "lat": 51.6425,
+   "lon": 12.30763,
+   "source_document": "AMG Lithium value chain: Mibra (BR) -> Bitterfeld (DE)",
+   "source_url": "https://amglithium.com/company/value-chain",
+   "source_type": "company_report",
+   "confidence": "documented"
+  }
+ ],
+ "kg": {
+  "nodes": [
+   {
+    "id": "origin",
+    "label": "Brazil",
+    "tier": -1,
+    "kind": "country",
+    "sub": "origin country"
+   },
+   {
+    "id": "n0",
+    "label": "Mibra",
+    "tier": 0,
+    "kind": "Mining",
+    "sub": "AMG \u00b7 Brazil"
+   },
+   {
+    "id": "n1",
+    "label": "Bitterfeld refinery",
+    "tier": 1,
+    "kind": "Processing",
+    "sub": "AMG Lithium \u00b7 Germany"
+   },
+   {
+    "id": "n2",
+    "label": "AMG Lithium",
+    "tier": 2,
+    "kind": "Manufacturing",
+    "sub": "AMG Lithium \u00b7 Germany"
+   }
+  ],
+  "edges": [
+   {
+    "source": "origin",
+    "target": "n0",
+    "kind": "located_in"
+   },
+   {
+    "source": "n0",
+    "target": "n1",
+    "kind": "material_flow"
+   },
+   {
+    "source": "n1",
+    "target": "n2",
+    "kind": "material_flow"
+   }
+  ]
+ },
+ "ndvi": {
+  "mine": "Mibra",
+  "value": 0.5169,
+  "verdict": "UNCERTAIN",
+  "thumb": "assets/ndvi/lithium_AMG_Critical_Materials.png",
+  "center": [
+   -21.09,
+   -44.59139
+  ],
+  "bounds": [
+   [
+    -21.16207,
+    -44.66864
+   ],
+   [
+    -21.01793,
+    -44.51414
+   ]
+  ]
+ },
+ "pdf": "assets/pdf/Lithium_AMG_Critical_Materials.pdf"
+}

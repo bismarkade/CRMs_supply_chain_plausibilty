@@ -1,0 +1,131 @@
+{
+ "id": "gold__Pandora",
+ "mineral": "gold",
+ "mineral_label": "Gold",
+ "company": "Pandora",
+ "declarant_country": "Denmark",
+ "regime": "EU Conflict Minerals Regulation 2017/821 \u00b7 OECD \u00b7 LBMA",
+ "tag": "Conflict-sensitive \u2014 origins & refiners",
+ "color": "#C8922A",
+ "overall": 0.8,
+ "verdict": "PASS",
+ "scores": {
+  "geology": 1.0,
+  "distance": 1.0,
+  "structure": 1.0,
+  "ndvi": 0.4,
+  "responsible": 0.6
+ },
+ "chain": [
+  {
+   "tier": "Mining",
+   "node_name": "Obuasi",
+   "node_type": "mine",
+   "company": "recycled / various",
+   "country": "Ghana",
+   "lat": 6.2,
+   "lon": -1.67,
+   "source_document": "Pandora committed to recycled gold/silver; mined origin opaque",
+   "source_url": "https://www.lbma.org.uk/good-delivery",
+   "source_type": "disclosure_gap",
+   "confidence": "recycled documented; mined origin opaque"
+  },
+  {
+   "tier": "Processing",
+   "node_name": "LBMA refiner",
+   "node_type": "refinery",
+   "company": "LBMA Good Delivery",
+   "country": "Switzerland",
+   "lat": 45.84,
+   "lon": 9.0,
+   "source_document": "Uses LBMA Good Delivery refiners",
+   "source_url": "https://www.lbma.org.uk/good-delivery",
+   "source_type": "registry_verified",
+   "confidence": "refiner LBMA-documented"
+  },
+  {
+   "tier": "Manufacturing",
+   "node_name": "Pandora jewellery",
+   "node_type": "manufacturer",
+   "company": "Pandora",
+   "country": "Denmark",
+   "lat": 55.68,
+   "lon": 12.57,
+   "source_document": "Pandora recycled-metals commitment",
+   "source_url": "https://www.lbma.org.uk/good-delivery",
+   "source_type": "company_report",
+   "confidence": "documented"
+  }
+ ],
+ "kg": {
+  "nodes": [
+   {
+    "id": "origin",
+    "label": "Ghana",
+    "tier": -1,
+    "kind": "country",
+    "sub": "origin country"
+   },
+   {
+    "id": "n0",
+    "label": "Obuasi",
+    "tier": 0,
+    "kind": "Mining",
+    "sub": "recycled / various \u00b7 Ghana"
+   },
+   {
+    "id": "n1",
+    "label": "LBMA refiner",
+    "tier": 1,
+    "kind": "Processing",
+    "sub": "LBMA Good Delivery \u00b7 Switzerland"
+   },
+   {
+    "id": "n2",
+    "label": "Pandora jewellery",
+    "tier": 2,
+    "kind": "Manufacturing",
+    "sub": "Pandora \u00b7 Denmark"
+   }
+  ],
+  "edges": [
+   {
+    "source": "origin",
+    "target": "n0",
+    "kind": "located_in"
+   },
+   {
+    "source": "n0",
+    "target": "n1",
+    "kind": "material_flow"
+   },
+   {
+    "source": "n1",
+    "target": "n2",
+    "kind": "material_flow"
+   }
+  ]
+ },
+ "ndvi": {
+  "mine": "Obuasi",
+  "value": 0.5266,
+  "verdict": "UNCERTAIN",
+  "thumb": "assets/ndvi/gold_Pandora.png",
+  "center": [
+   6.2,
+   -1.67
+  ],
+  "bounds": [
+   [
+    6.12793,
+    -1.7425
+   ],
+   [
+    6.27207,
+    -1.5975
+   ]
+  ]
+ },
+ "pdf": "assets/pdf/Gold_Pandora.pdf",
+ "cahra": "partial"
+}

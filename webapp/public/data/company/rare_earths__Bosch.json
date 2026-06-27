@@ -1,0 +1,129 @@
+{
+ "id": "rare_earths__Bosch",
+ "mineral": "rare_earths",
+ "mineral_label": "Rare Earths",
+ "company": "Bosch",
+ "declarant_country": "Germany",
+ "regime": "Critical Raw Materials Act 2024/1252 \u00b7 China export-control exposure",
+ "tag": "Magnet metals \u2014 wind turbines & EV motors",
+ "color": "#1B9AAA",
+ "overall": 0.86,
+ "verdict": "PASS",
+ "scores": {
+  "geology": 1.0,
+  "distance": 0.75,
+  "structure": 1.0,
+  "ndvi": 0.7
+ },
+ "chain": [
+  {
+   "tier": "Mining",
+   "node_name": "Mount Weld",
+   "node_type": "mine",
+   "company": "Lynas",
+   "country": "Australia",
+   "lat": -28.7375,
+   "lon": 122.524,
+   "source_document": "Neo Narva (EE) opens; feedstock from Lynas; multi-year Bosch MoU",
+   "source_url": "https://www.mining.com/neo-performance-opens-europes-first-rare-earth-magnet-plant/",
+   "source_type": "company_announcement",
+   "confidence": "documented"
+  },
+  {
+   "tier": "Processing",
+   "node_name": "Neo Silmet/Narva (Estonia)",
+   "node_type": "processor",
+   "company": "Neo Performance Materials",
+   "country": "Estonia",
+   "lat": 59.3797,
+   "lon": 28.1903,
+   "source_document": "Neo Silmet separation -> Narva NdFeB magnets (Estonia)",
+   "source_url": "https://www.neomaterials.com/neo-performance-materials-opens-state-of-the-art-permanent-magnet-facility-in-europe/",
+   "source_type": "company_announcement",
+   "confidence": "documented"
+  },
+  {
+   "tier": "Manufacturing",
+   "node_name": "Bosch EV motors",
+   "node_type": "manufacturer",
+   "company": "Robert Bosch",
+   "country": "Germany",
+   "lat": 48.8,
+   "lon": 9.06,
+   "source_document": "Neo\u2013Bosch multi-year magnet MoU",
+   "source_url": "https://www.mining.com/neo-performance-opens-europes-first-rare-earth-magnet-plant/",
+   "source_type": "company_announcement",
+   "confidence": "documented"
+  }
+ ],
+ "kg": {
+  "nodes": [
+   {
+    "id": "origin",
+    "label": "Australia",
+    "tier": -1,
+    "kind": "country",
+    "sub": "origin country"
+   },
+   {
+    "id": "n0",
+    "label": "Mount Weld",
+    "tier": 0,
+    "kind": "Mining",
+    "sub": "Lynas \u00b7 Australia"
+   },
+   {
+    "id": "n1",
+    "label": "Neo Silmet/Narva (Estonia)",
+    "tier": 1,
+    "kind": "Processing",
+    "sub": "Neo Performance Materials \u00b7 Estonia"
+   },
+   {
+    "id": "n2",
+    "label": "Bosch EV motors",
+    "tier": 2,
+    "kind": "Manufacturing",
+    "sub": "Robert Bosch \u00b7 Germany"
+   }
+  ],
+  "edges": [
+   {
+    "source": "origin",
+    "target": "n0",
+    "kind": "located_in"
+   },
+   {
+    "source": "n0",
+    "target": "n1",
+    "kind": "material_flow"
+   },
+   {
+    "source": "n1",
+    "target": "n2",
+    "kind": "material_flow"
+   }
+  ]
+ },
+ "ndvi": {
+  "mine": "Mount Weld",
+  "value": 0.2693,
+  "verdict": "CONSISTENT",
+  "thumb": "assets/ndvi/rare_earths_Bosch.png",
+  "center": [
+   -28.7375,
+   122.524
+  ],
+  "bounds": [
+   [
+    -28.80957,
+    122.4418
+   ],
+   [
+    -28.66543,
+    122.6062
+   ]
+  ]
+ },
+ "pdf": "assets/pdf/Rare_Earth_Bosch.pdf"
+}

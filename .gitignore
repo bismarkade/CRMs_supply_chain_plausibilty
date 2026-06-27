@@ -1,0 +1,35 @@
+# Virtual environments
+crm_sc_venv/
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+
+# Jupyter / notebooks (kept local for now)
+*.ipynb
+*.nbconvert.ipynb
+
+# Local data & generated artifacts (kept local; app reads via pipeline / Blob)
+# anchored to repo root so they don't match webapp/public/data
+/data/
+/cs_data/
+/reports/
+/uv.lock
+
+# Node / Next.js / Vercel (webapp)
+node_modules/
+.next/
+out/
+.vercel/
+*.tsbuildinfo
+.env
+.env*.local
+
+# Large binaries staged for Blob (not committed)
+webapp/public/data/assets/
