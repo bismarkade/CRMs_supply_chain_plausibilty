@@ -11,8 +11,11 @@ body {
   @apply bg-slate-50 text-ink font-sans antialiased;
 }
 
-/* animated supply-chain flow lines (SVG stroke) */
-.flow-line {
+/* animated supply-chain flow lines (SVG stroke).
+   Target dashed overlay paths by attribute — react-leaflet does not reliably
+   apply the `className` option in production, so we can't rely on `.flow-line`. */
+.flow-line,
+.leaflet-overlay-pane path[stroke-dasharray] {
   animation: flowdash 1.3s linear infinite;
 }
 @keyframes flowdash {
