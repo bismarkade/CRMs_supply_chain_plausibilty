@@ -79,12 +79,12 @@ export default function CompanyMap({
           <Fragment>
             <CircleMarker
               center={pts[0]}
-              radius={22}
+              radius={34}
               pathOptions={{
                 color: mine.cahra === "yes" ? "#C0392B" : "#E08A1E",
-                weight: 3,
+                weight: 2.5,
                 fillColor: mine.cahra === "yes" ? "#C0392B" : "#E08A1E",
-                fillOpacity: 0.18,
+                fillOpacity: 0.2,
               }}
             >
               <Tooltip>CAHRA risk: {mine.cahra}</Tooltip>

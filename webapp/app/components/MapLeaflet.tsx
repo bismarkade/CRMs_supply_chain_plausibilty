@@ -93,12 +93,12 @@ export default function MapLeaflet({
                 <Fragment>
                   <CircleMarker
                     center={disp[0]}
-                    radius={20}
+                    radius={30}
                     pathOptions={{
                       color: CAHRA_COLOR[p.cahra],
-                      weight: 3,
+                      weight: 2.5,
                       fillColor: CAHRA_COLOR[p.cahra],
-                      fillOpacity: 0.18,
+                      fillOpacity: 0.22,
                     }}
                   >
                     <Tooltip>CAHRA risk: {p.cahra}</Tooltip>
